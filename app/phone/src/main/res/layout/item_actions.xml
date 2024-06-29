@@ -48,9 +48,12 @@
         style="?attr/materialIconButtonFilledTonalStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/bg_action_check"
+        android:checkable="true"
         android:contentDescription="@string/check_button_description"
         android:enabled="false"
         app:icon="@drawable/ic_check"
+        app:iconTint="@color/on_bg_action_check"
         tools:enabled="true" />
 
     <com.google.android.material.button.MaterialButton
@@ -58,9 +61,12 @@
         style="?attr/materialIconButtonFilledTonalStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/bg_action_favorite"
+        android:checkable="true"
         android:contentDescription="@string/favorite_button_description"
         android:enabled="false"
         app:icon="@drawable/ic_heart"
+        app:iconTint="@color/on_bg_action_favorite"
         tools:enabled="true" />
 
     <RelativeLayout

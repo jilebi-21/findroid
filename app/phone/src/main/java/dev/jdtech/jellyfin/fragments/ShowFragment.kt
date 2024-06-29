@@ -16,7 +16,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.google.android.material.R
 import dagger.hilt.android.AndroidEntryPoint
 import dev.jdtech.jellyfin.AppPreferences
 import dev.jdtech.jellyfin.adapters.PersonListAdapter
@@ -31,7 +30,6 @@ import dev.jdtech.jellyfin.models.FindroidSourceType
 import dev.jdtech.jellyfin.models.PlayerItem
 import dev.jdtech.jellyfin.models.isDownloaded
 import dev.jdtech.jellyfin.utils.checkIfLoginRequired
-import dev.jdtech.jellyfin.utils.setIconTintColorAttribute
 import dev.jdtech.jellyfin.viewmodels.PlayerItemsEvent
 import dev.jdtech.jellyfin.viewmodels.PlayerViewModel
 import dev.jdtech.jellyfin.viewmodels.ShowEvent
@@ -270,28 +268,15 @@ class ShowFragment : Fragment() {
     }
 
     private fun bindCheckButtonState(played: Boolean) {
-        when (played) {
-            true -> binding.itemActions.checkButton.setIconTintResource(CoreR.color.red)
-            false -> binding.itemActions.checkButton.setIconTintColorAttribute(
-                R.attr.colorOnSecondaryContainer,
-                requireActivity().theme,
-            )
-        }
+        binding.itemActions.checkButton.isChecked = played
     }
 
     private fun bindFavoriteButtonState(favorite: Boolean) {
-        val favoriteDrawable = when (favorite) {
-            true -> CoreR.drawable.ic_heart_filled
-            false -> CoreR.drawable.ic_heart
-        }
+        val favoriteDrawable =
+            if (favorite) CoreR.drawable.ic_heart_filled
+            else CoreR.drawable.ic_heart
         binding.itemActions.favoriteButton.setIconResource(favoriteDrawable)
-        when (favorite) {
-            true -> binding.itemActions.favoriteButton.setIconTintResource(CoreR.color.red)
-            false -> binding.itemActions.favoriteButton.setIconTintColorAttribute(
-                R.attr.colorOnSecondaryContainer,
-                requireActivity().theme,
-            )
-        }
+        binding.itemActions.favoriteButton.isChecked = favorite
     }
 
     private fun bindPlayerItems(items: List<PlayerItem>) {

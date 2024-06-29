@@ -37,7 +37,6 @@ import dev.jdtech.jellyfin.models.UiText
 import dev.jdtech.jellyfin.models.isDownloaded
 import dev.jdtech.jellyfin.models.isDownloading
 import dev.jdtech.jellyfin.utils.checkIfLoginRequired
-import dev.jdtech.jellyfin.utils.setIconTintColorAttribute
 import dev.jdtech.jellyfin.viewmodels.MovieEvent
 import dev.jdtech.jellyfin.viewmodels.MovieViewModel
 import dev.jdtech.jellyfin.viewmodels.PlayerItemsEvent
@@ -413,28 +412,16 @@ class MovieFragment : Fragment() {
     }
 
     private fun bindCheckButtonState(played: Boolean) {
-        when (played) {
-            true -> binding.itemActions.checkButton.setIconTintResource(CoreR.color.red)
-            false -> binding.itemActions.checkButton.setIconTintColorAttribute(
-                com.google.android.material.R.attr.colorOnSecondaryContainer,
-                requireActivity().theme,
-            )
-        }
+        binding.itemActions.checkButton.isChecked = played
     }
 
     private fun bindFavoriteButtonState(favorite: Boolean) {
-        val favoriteDrawable = when (favorite) {
-            true -> CoreR.drawable.ic_heart_filled
-            false -> CoreR.drawable.ic_heart
-        }
+        val favoriteDrawable =
+            if (favorite) CoreR.drawable.ic_heart_filled
+            else CoreR.drawable.ic_heart
+
         binding.itemActions.favoriteButton.setIconResource(favoriteDrawable)
-        when (favorite) {
-            true -> binding.itemActions.favoriteButton.setIconTintResource(CoreR.color.red)
-            false -> binding.itemActions.favoriteButton.setIconTintColorAttribute(
-                com.google.android.material.R.attr.colorOnSecondaryContainer,
-                requireActivity().theme,
-            )
-        }
+        binding.itemActions.favoriteButton.isChecked = favorite
     }
 
     private fun bindPlayerItems(items: List<PlayerItem>) {

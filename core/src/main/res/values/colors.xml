@@ -44,4 +44,7 @@
 
     <color name="logo_primary">#FF3DDC84</color>
     <color name="logo_secondary">#FF00A4DC</color>
+
+    <color name="item_action_played">#038043</color>
+    <color name="item_action_favorite">#EB5757</color>
 </resources>

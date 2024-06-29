@@ -2,13 +2,9 @@ package dev.jdtech.jellyfin.utils
 
 import android.app.Activity
 import android.content.Intent
-import android.content.res.ColorStateList
 import android.content.res.Resources
 import android.os.Build
 import android.os.Bundle
-import android.util.TypedValue
-import androidx.annotation.AttrRes
-import com.google.android.material.button.MaterialButton
 import dev.jdtech.jellyfin.models.CollectionType
 import dev.jdtech.jellyfin.models.View
 import org.jellyfin.sdk.model.api.BaseItemDto
@@ -23,17 +19,6 @@ fun BaseItemDto.toView(): View {
 }
 
 fun Resources.dip(px: Int) = (px * displayMetrics.density).toInt()
-
-fun MaterialButton.setIconTintColorAttribute(@AttrRes attributeId: Int, theme: Resources.Theme) {
-    val typedValue = TypedValue()
-    theme.resolveAttribute(attributeId, typedValue, true)
-    this.iconTint = ColorStateList.valueOf(
-        resources.getColor(
-            typedValue.resourceId,
-            theme,
-        ),
-    )
-}
 
 inline fun <reified T : Serializable> Bundle.serializable(key: String): T? = when {
     Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU -> getSerializable(key, T::class.java)
