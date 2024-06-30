@@ -288,6 +288,8 @@ class EpisodeBottomSheetFragment : BottomSheetDialogFragment() {
             binding.overview.text = fromHtml(episode.overview, 0)
             binding.year.text = formatDateTime(episode.premiereDate)
             binding.playtime.text = getString(CoreR.string.runtime_minutes, episode.runtimeTicks.div(600000000))
+
+            binding.communityRating.isVisible = episode.communityRating != null
             episode.communityRating?.also {
                 binding.communityRating.text = episode.communityRating.toString()
                 binding.communityRating.isVisible = true

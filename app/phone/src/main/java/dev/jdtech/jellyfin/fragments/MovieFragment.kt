@@ -308,6 +308,8 @@ class MovieFragment : Fragment() {
                 binding.playtime.text = runTime
             }
             binding.officialRating.text = item.officialRating
+
+            binding.communityRating.isVisible = item.communityRating != null
             item.communityRating?.also {
                 binding.communityRating.text = it.toString()
                 binding.communityRating.isVisible = true
