@@ -1,6 +1,5 @@
 package dev.jdtech.jellyfin.adapters
 
-import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,12 +23,13 @@ class HomeEpisodeListAdapter(private val onClickListener: (item: FindroidItem) -
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: FindroidItem) {
             if (item.playbackPositionTicks > 0) {
-                binding.progressBar.layoutParams.width = TypedValue.applyDimension(
-                    TypedValue.COMPLEX_UNIT_DIP,
-                    (item.playbackPositionTicks.div(item.runtimeTicks.toFloat()).times(224)),
-                    binding.progressBar.context.resources.displayMetrics,
-                ).toInt()
+                val progress = item.playbackPositionTicks
+                    .div(item.runtimeTicks.toFloat())
+                    .times(binding.progressBar.max - binding.progressBar.min)
+                    .toInt()
+
                 binding.progressBar.visibility = View.VISIBLE
+                binding.progressBar.progress = progress
             }
 
             binding.downloadedIcon.isVisible = item.isDownloaded()

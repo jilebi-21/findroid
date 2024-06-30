@@ -49,12 +49,13 @@ class EpisodeListAdapter(
             binding.episodeOverview.text = fromHtml(episode.overview, 0)
 
             if (episode.playbackPositionTicks > 0) {
-                binding.progressBar.layoutParams.width = TypedValue.applyDimension(
-                    TypedValue.COMPLEX_UNIT_DIP,
-                    (episode.playbackPositionTicks.div(episode.runtimeTicks.toFloat()).times(84)),
-                    binding.progressBar.context.resources.displayMetrics,
-                ).toInt()
+                val progress = episode.playbackPositionTicks
+                    .div(episode.runtimeTicks.toFloat())
+                    .times(binding.progressBar.max - binding.progressBar.min)
+                    .toInt()
+
                 binding.progressBar.visibility = View.VISIBLE
+                binding.progressBar.progress = progress
             } else {
                 binding.progressBar.visibility = View.GONE
             }

@@ -80,17 +80,20 @@
 
     </LinearLayout>
 
-    <FrameLayout
+    <com.google.android.material.progressindicator.LinearProgressIndicator
         android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="4dp"
-        android:layout_marginHorizontal="8dp"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_setup_background"
+        android:indeterminate="false"
+        android:max="100000"
         android:visibility="gone"
+        app:indicatorTrackGapSize="0dp"
         app:layout_constraintBottom_toBottomOf="@id/episode_image"
+        app:layout_constraintEnd_toEndOf="@id/episode_image"
         app:layout_constraintStart_toStartOf="@id/episode_image"
-        tools:layout_width="50dp"
+        app:trackStopIndicatorSize="0dp"
         tools:visibility="visible" />
 
     <TextView
