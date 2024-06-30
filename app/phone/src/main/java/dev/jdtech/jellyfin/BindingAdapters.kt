@@ -77,7 +77,7 @@ fun bindUserImage(imageView: ImageView, user: User) {
 
 private fun ImageView.loadImage(
     url: String,
-    @DrawableRes placeholderId: Int = CoreR.color.neutral_800,
+    @DrawableRes placeholderId: Int = CoreR.color.surface_variant,
 ): View {
     val api = JellyfinApi.getInstance(context.applicationContext)
 

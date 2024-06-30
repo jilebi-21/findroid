@@ -187,7 +187,7 @@ class ShowFragment : Fragment() {
 
                     if (downloaded) {
                         binding.itemActions.downloadButton.setIconTintResource(
-                            CoreR.color.red,
+                            android.R.color.holo_red_light,
                         )
                     }
                 }
