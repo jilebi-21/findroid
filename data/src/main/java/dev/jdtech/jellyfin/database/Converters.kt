@@ -38,4 +38,14 @@ class Converters {
     fun fromStringToFindroidChapters(value: String?): List<FindroidChapter>? {
         return value?.let { Json.decodeFromString(value) }
     }
+
+    @TypeConverter
+    fun fromListOfStringsToString(value: List<String>?): String? {
+        return value?.joinToString(separator = ",")
+    }
+
+    @TypeConverter
+    fun fromStringToListOfStrings(value: String?): List<String>? {
+        return value?.split(",")?.map { it.trim() }
+    }
 }

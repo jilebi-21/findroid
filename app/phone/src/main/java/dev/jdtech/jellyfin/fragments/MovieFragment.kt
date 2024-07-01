@@ -6,7 +6,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.text.Html.fromHtml
 import android.text.format.Formatter
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,8 +30,6 @@ import dev.jdtech.jellyfin.databinding.FragmentMovieBinding
 import dev.jdtech.jellyfin.dialogs.ErrorDialogFragment
 import dev.jdtech.jellyfin.dialogs.getStorageSelectionDialog
 import dev.jdtech.jellyfin.dialogs.getVideoVersionDialog
-import dev.jdtech.jellyfin.models.AudioCodec
-import dev.jdtech.jellyfin.models.DisplayProfile
 import dev.jdtech.jellyfin.models.FindroidSourceType
 import dev.jdtech.jellyfin.models.PlayerItem
 import dev.jdtech.jellyfin.models.UiText
@@ -332,6 +329,11 @@ class MovieFragment : Fragment() {
                 size?.let { binding.info.size.text = it }
                 binding.info.sizeGroup.isVisible = size != null
             }
+
+            binding.info.tagline.isVisible = if (!item.taglines.isNullOrEmpty()) {
+                binding.info.tagline.text = item.taglines!![0]
+                true
+            } else false
 
             binding.info.description.text = fromHtml(item.overview, 0)
             binding.info.director.text = director?.name

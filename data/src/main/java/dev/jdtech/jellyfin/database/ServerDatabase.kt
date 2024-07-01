@@ -21,7 +21,7 @@ import dev.jdtech.jellyfin.models.User
 
 @Database(
     entities = [Server::class, ServerAddress::class, User::class, FindroidMovieDto::class, FindroidShowDto::class, FindroidSeasonDto::class, FindroidEpisodeDto::class, FindroidSourceDto::class, FindroidMediaStreamDto::class, IntroDto::class, FindroidUserDataDto::class, FindroidTrickplayInfoDto::class],
-    version = 5,
+    version = 6,
     autoMigrations = [
         AutoMigration(from = 2, to = 3),
         AutoMigration(from = 3, to = 4),

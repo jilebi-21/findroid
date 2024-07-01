@@ -33,6 +33,7 @@ data class FindroidMovie(
     override val images: FindroidImages,
     override val chapters: List<FindroidChapter>?,
     override val trickplayInfo: Map<String, FindroidTrickplayInfo>?,
+    val taglines: List<String>?
 ) : FindroidItem, FindroidSources
 
 suspend fun BaseItemDto.toFindroidMovie(
@@ -68,6 +69,7 @@ suspend fun BaseItemDto.toFindroidMovie(
         images = toFindroidImages(jellyfinRepository),
         chapters = toFindroidChapters(),
         trickplayInfo = trickplay?.mapValues { it.value[it.value.keys.max()]!!.toFindroidTrickplayInfo() },
+        taglines = taglines
     )
 }
 
@@ -104,5 +106,6 @@ fun FindroidMovieDto.toFindroidMovie(database: ServerDatabaseDao, userId: UUID):
         images = FindroidImages(),
         chapters = chapters,
         trickplayInfo = trickplayInfos,
+        taglines = taglines
     )
 }
