@@ -2,10 +2,14 @@ package dev.jdtech.jellyfin.fragments
 
 import android.app.DownloadManager
 import android.content.Intent
+import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
 import android.text.Html.fromHtml
+import android.text.Spannable
+import android.text.SpannableString
 import android.text.format.Formatter
+import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,6 +39,7 @@ import dev.jdtech.jellyfin.models.PlayerItem
 import dev.jdtech.jellyfin.models.UiText
 import dev.jdtech.jellyfin.models.isDownloaded
 import dev.jdtech.jellyfin.models.isDownloading
+import dev.jdtech.jellyfin.utils.TimeUtils
 import dev.jdtech.jellyfin.utils.checkIfLoginRequired
 import dev.jdtech.jellyfin.viewmodels.MovieEvent
 import dev.jdtech.jellyfin.viewmodels.MovieViewModel
@@ -280,7 +285,21 @@ class MovieFragment : Fragment() {
 
             binding.itemActions.playButton.isEnabled = item.canPlay && item.sources.isNotEmpty()
             if (item.playbackPositionTicks > 0) {
-                binding.itemActions.playButton.text = getText(CoreR.string.continue_watching)
+                binding.itemActions.playButton.setTypeface(null, Typeface.NORMAL)
+
+                val text = getString(CoreR.string.continue_watching)
+                val remTime = TimeUtils.ticksToMinutes(item.runtimeTicks - item.playbackPositionTicks)
+
+                val spannable = SpannableString(text + " (" + remTime + "m)")
+
+                spannable.setSpan(
+                    StyleSpan(Typeface.BOLD),
+                    0,
+                    text.length,
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                )
+
+                binding.itemActions.playButton.text = spannable
             }
 
             binding.itemActions.checkButton.isEnabled = true

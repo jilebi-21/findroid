@@ -1,9 +1,13 @@
 package dev.jdtech.jellyfin.fragments
 
 import android.app.DownloadManager
+import android.graphics.Typeface
 import android.os.Bundle
 import android.text.Html.fromHtml
+import android.text.Spannable
+import android.text.SpannableString
 import android.text.format.Formatter
+import android.text.style.StyleSpan
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
@@ -33,6 +37,7 @@ import dev.jdtech.jellyfin.models.PlayerItem
 import dev.jdtech.jellyfin.models.UiText
 import dev.jdtech.jellyfin.models.isDownloaded
 import dev.jdtech.jellyfin.models.isDownloading
+import dev.jdtech.jellyfin.utils.TimeUtils
 import dev.jdtech.jellyfin.viewmodels.EpisodeBottomSheetEvent
 import dev.jdtech.jellyfin.viewmodels.EpisodeBottomSheetViewModel
 import dev.jdtech.jellyfin.viewmodels.PlayerItemsEvent
@@ -251,6 +256,24 @@ class EpisodeBottomSheetFragment : BottomSheetDialogFragment() {
             }
 
             binding.itemActions.playButton.isEnabled = episode.canPlay && episode.sources.isNotEmpty()
+            if (episode.playbackPositionTicks > 0) {
+                binding.itemActions.playButton.setTypeface(null, Typeface.NORMAL)
+
+                val text = getString(CoreR.string.continue_watching)
+                val remTime = TimeUtils.ticksToMinutes(episode.runtimeTicks - episode.playbackPositionTicks)
+
+                val spannable = SpannableString(text + " (" + remTime + "m)")
+
+                spannable.setSpan(
+                    StyleSpan(Typeface.BOLD),
+                    0,
+                    text.length,
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                )
+
+                binding.itemActions.playButton.text = spannable
+            }
+
             binding.itemActions.checkButton.isEnabled = true
             binding.itemActions.favoriteButton.isEnabled = true
 
