@@ -13,6 +13,7 @@ import dev.jdtech.jellyfin.models.FindroidEpisode
 import dev.jdtech.jellyfin.models.FindroidItem
 import dev.jdtech.jellyfin.models.FindroidMovie
 import dev.jdtech.jellyfin.models.isDownloaded
+import dev.jdtech.jellyfin.utils.TimeUtils
 import dev.jdtech.jellyfin.core.R as CoreR
 
 class HomeEpisodeListAdapter(private val onClickListener: (item: FindroidItem) -> Unit) : ListAdapter<FindroidItem, HomeEpisodeListAdapter.EpisodeViewHolder>(DiffCallback) {
@@ -33,6 +34,10 @@ class HomeEpisodeListAdapter(private val onClickListener: (item: FindroidItem) -
             }
 
             binding.downloadedIcon.isVisible = item.isDownloaded()
+
+            val remTime = TimeUtils.ticksToMinutes(item.runtimeTicks - item.playbackPositionTicks)
+            val remTimeMinutes = "${remTime}m"
+            binding.remainingTime.text = remTimeMinutes
 
             when (item) {
                 is FindroidMovie -> {
