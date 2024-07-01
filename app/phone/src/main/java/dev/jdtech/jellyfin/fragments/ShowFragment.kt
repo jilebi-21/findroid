@@ -100,6 +100,7 @@ class ShowFragment : Fragment() {
 
         // TODO make download button work for shows
         binding.itemActions.downloadButton.visibility = View.GONE
+        binding.itemActions.progressDownload.visibility = View.GONE
 
         binding.errorLayout.errorRetryButton.setOnClickListener {
             viewModel.loadData(args.itemId, args.offline)
@@ -217,8 +218,6 @@ class ShowFragment : Fragment() {
             }
 
             binding.info.description.text = fromHtml(item.overview, 0)
-            binding.info.genres.text = genresString
-            binding.info.genresGroup.isVisible = item.genres.isNotEmpty()
             binding.info.director.text = director?.name
             binding.info.directorGroup.isVisible = director != null
             binding.info.writers.text = writersString

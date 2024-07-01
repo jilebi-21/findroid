@@ -156,8 +156,8 @@
             android:gravity="bottom"
             android:layout_marginEnd="8dp"
             android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-            app:drawableStartCompat="@drawable/ic_star"
-            app:drawableTint="@color/yellow"
+            app:drawableStartCompat="@drawable/ic_star_filled"
+            app:drawableTint="@color/item_rating"
             tools:text="8.8" />
 
         <TextView

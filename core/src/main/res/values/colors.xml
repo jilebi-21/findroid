@@ -51,12 +51,12 @@
 
     <color name="transparent_white_300">#4DFFFFFF</color>
     <color name="transparent_black_300">#4D000000</color>
-    <color name="yellow">#F2C94C</color>
     <color name="player_background">#AA000000</color>
 
     <color name="logo_primary">#FF3DDC84</color>
     <color name="logo_secondary">#FF00A4DC</color>
 
+    <color name="item_rating">#F2C94C</color>
     <color name="item_action_played">#069A52</color>
     <color name="item_action_favorite">#EB5757</color>
 

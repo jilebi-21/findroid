@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.text.Html.fromHtml
 import android.text.format.Formatter
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.chip.Chip
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 import dev.jdtech.jellyfin.AppPreferences
@@ -46,6 +48,7 @@ import timber.log.Timber
 import java.util.UUID
 import javax.inject.Inject
 import dev.jdtech.jellyfin.core.R as CoreR
+
 
 @AndroidEntryPoint
 class MovieFragment : Fragment() {
@@ -279,6 +282,10 @@ class MovieFragment : Fragment() {
             binding.actors.isVisible = actors.isNotEmpty()
 
             binding.itemActions.playButton.isEnabled = item.canPlay && item.sources.isNotEmpty()
+            if (item.playbackPositionTicks > 0) {
+                binding.itemActions.playButton.text = getText(CoreR.string.continue_watching)
+            }
+
             binding.itemActions.checkButton.isEnabled = true
             binding.itemActions.favoriteButton.isEnabled = true
 
@@ -315,63 +322,6 @@ class MovieFragment : Fragment() {
                 binding.communityRating.isVisible = true
             }
 
-            videoMetadata.let {
-                with(binding) {
-                    videoMetaChips.isVisible = true
-                    audioChannelChip.text = it.audioChannels.firstOrNull()?.raw
-                    resChip.text = it.resolution.firstOrNull()?.raw
-                    audioChannelChip.isVisible = it.audioChannels.isNotEmpty()
-                    resChip.isVisible = it.resolution.isNotEmpty()
-
-                    it.displayProfiles.firstOrNull()?.apply {
-                        videoProfileChip.text = this.raw
-                        videoProfileChip.isVisible = when (this) {
-                            DisplayProfile.HDR10,
-                            DisplayProfile.HDR10_PLUS,
-                            DisplayProfile.HLG,
-                            -> {
-                                videoProfileChip.chipStartPadding = .0f
-                                true
-                            }
-
-                            DisplayProfile.DOLBY_VISION -> {
-                                videoProfileChip.isChipIconVisible = true
-                                true
-                            }
-
-                            else -> false
-                        }
-                    }
-
-                    audioCodecChip.text = when (val codec = it.audioCodecs.firstOrNull()) {
-                        AudioCodec.AC3, AudioCodec.EAC3, AudioCodec.TRUEHD -> {
-                            audioCodecChip.isVisible = true
-                            if (it.isAtmos.firstOrNull() == true) {
-                                "${codec.raw} | Atmos"
-                            } else {
-                                codec.raw
-                            }
-                        }
-
-                        AudioCodec.DTS -> {
-                            audioCodecChip.apply {
-                                isVisible = true
-                                isChipIconVisible = false
-                                chipStartPadding = .0f
-                            }
-                            codec.raw
-                        }
-
-                        else -> {
-                            audioCodecChip.isVisible = false
-                            null
-                        }
-                    }
-                }
-            }
-
-            binding.subsChip.isVisible = subtitleString.isNotEmpty()
-
             if (appPreferences.displayExtraInfo) {
                 binding.info.video.text = videoString
                 binding.info.videoGroup.isVisible = videoString.isNotEmpty()
@@ -384,12 +334,24 @@ class MovieFragment : Fragment() {
             }
 
             binding.info.description.text = fromHtml(item.overview, 0)
-            binding.info.genres.text = genresString
-            binding.info.genresGroup.isVisible = item.genres.isNotEmpty()
             binding.info.director.text = director?.name
             binding.info.directorGroup.isVisible = director != null
             binding.info.writers.text = writersString
             binding.info.writersGroup.isVisible = writers.isNotEmpty()
+
+            binding.genreChips.removeAllViews()
+            val layoutInflater = LayoutInflater.from(context)
+
+            item.genres.forEach { genre ->
+                val chip = layoutInflater.inflate(
+                    CoreR.layout.item_chip,
+                    binding.genreChips,
+                    false
+                ) as Chip
+                chip.text = genre
+
+                binding.genreChips.addView(chip)
+            }
 
             val actorsAdapter = binding.peopleRecyclerView.adapter as PersonListAdapter
             actorsAdapter.submitList(actors)

@@ -8,4 +8,5 @@
     <item name="collection_columns" type="integer">2</item>
     <item name="library_columns" type="integer">2</item>
     <dimen name="person_detail_overview_height">72dp</dimen>
+    <dimen name="radius_official_rating_card">4dp</dimen>
 </resources>

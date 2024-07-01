@@ -18,8 +18,8 @@
         <item name="android:widgetLayout">@layout/preference_material3_switch</item>
     </style>
 
-    <style name="MetaChip" parent="Widget.Material3.Chip.Assist">
-        <item name="android:textAppearance">@style/TextAppearance.Material3.LabelLarge</item>
+    <style name="GenreChip" parent="Widget.Material3.Chip.Assist">
+        <item name="android:textAppearance">@style/TextAppearance.Material3.LabelMedium</item>
         <item name="android:textStyle">bold</item>
         <item name="chipBackgroundColor">?attr/colorSecondaryContainer</item>
         <item name="chipCornerRadius">6dp</item>
