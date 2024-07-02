@@ -48,7 +48,7 @@
             android:textColor="@android:color/white"
             android:textSize="14sp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_skip_intro"
             style="@style/Widget.Material3.Button.OutlinedButton.Icon"
             android:layout_width="wrap_content"
@@ -60,8 +60,9 @@
             android:textColor="@android:color/white"
             android:visibility="gone"
             app:backgroundTint="@color/player_background"
-            app:icon="@drawable/ic_skip_forward"
+            app:icon="@drawable/ic_skip_forward_filled"
             app:iconGravity="end"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Findroid.Corner.Small"
             app:iconTint="@android:color/white"
             app:strokeColor="@android:color/white"
             tools:visibility="visible" />

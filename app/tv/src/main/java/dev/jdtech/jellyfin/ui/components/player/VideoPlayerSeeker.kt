@@ -62,12 +62,12 @@ fun VideoPlayerSeeker(
         ) {
             if (!isPlaying) {
                 Icon(
-                    painter = painterResource(id = CoreR.drawable.ic_play),
+                    painter = painterResource(id = CoreR.drawable.ic_play_filled),
                     contentDescription = null,
                 )
             } else {
                 Icon(
-                    painter = painterResource(id = CoreR.drawable.ic_pause),
+                    painter = painterResource(id = CoreR.drawable.ic_pause_filled),
                     contentDescription = null,
                 )
             }

@@ -76,7 +76,6 @@ class EpisodeBottomSheetFragment : BottomSheetDialogFragment() {
 
         binding.itemActions.playButton.setOnClickListener {
             binding.itemActions.playButton.isEnabled = false
-            binding.itemActions.playButton.setIconResource(AndroidR.color.transparent)
             binding.itemActions.progressPlay.isVisible = true
             playerViewModel.loadPlayerItems(viewModel.item)
         }
@@ -340,7 +339,6 @@ class EpisodeBottomSheetFragment : BottomSheetDialogFragment() {
 
     private fun bindPlayerItems(items: List<PlayerItem>) {
         navigateToPlayerActivity(items.toTypedArray())
-        binding.itemActions.playButton.setIconResource(CoreR.drawable.ic_play)
         binding.itemActions.progressPlay.visibility = View.INVISIBLE
     }
 
@@ -368,7 +366,6 @@ class EpisodeBottomSheetFragment : BottomSheetDialogFragment() {
 
     private fun playButtonNormal() {
         binding.itemActions.playButton.isEnabled = true
-        binding.itemActions.playButton.setIconResource(CoreR.drawable.ic_play)
         binding.itemActions.progressPlay.visibility = View.INVISIBLE
     }
 

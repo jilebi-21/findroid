@@ -137,7 +137,6 @@ class ShowFragment : Fragment() {
 
         binding.itemActions.playButton.setOnClickListener {
             binding.itemActions.playButton.isEnabled = false
-            binding.itemActions.playButton.setIconResource(android.R.color.transparent)
             binding.itemActions.progressPlay.isVisible = true
             playerViewModel.loadPlayerItems(viewModel.item)
         }
@@ -281,7 +280,6 @@ class ShowFragment : Fragment() {
 
     private fun bindPlayerItems(items: List<PlayerItem>) {
         navigateToPlayerActivity(items.toTypedArray())
-        binding.itemActions.playButton.setIconResource(CoreR.drawable.ic_play)
         binding.itemActions.progressPlay.visibility = View.INVISIBLE
     }
 
@@ -297,7 +295,6 @@ class ShowFragment : Fragment() {
 
     private fun playButtonNormal() {
         binding.itemActions.playButton.isEnabled = true
-        binding.itemActions.playButton.setIconResource(CoreR.drawable.ic_play)
         binding.itemActions.progressPlay.visibility = View.INVISIBLE
     }
 

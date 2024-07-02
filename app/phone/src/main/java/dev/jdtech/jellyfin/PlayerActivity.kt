@@ -39,6 +39,8 @@ import dev.jdtech.jellyfin.dialogs.SpeedSelectionDialogFragment
 import dev.jdtech.jellyfin.dialogs.TrackSelectionDialogFragment
 import dev.jdtech.jellyfin.utils.PlayerGestureHelper
 import dev.jdtech.jellyfin.utils.PreviewScrubListener
+import dev.jdtech.jellyfin.utils.hideByFade
+import dev.jdtech.jellyfin.utils.showByFade
 import dev.jdtech.jellyfin.viewmodels.PlayerActivityViewModel
 import dev.jdtech.jellyfin.viewmodels.PlayerEvents
 import kotlinx.coroutines.launch
@@ -208,9 +210,7 @@ class PlayerActivity : BasePlayerActivity() {
             pipButton.isEnabled = false
             pipButton.imageAlpha = 75
         } else {
-            val pipSpace = binding.playerView.findViewById<Space>(R.id.space_pip)
             pipButton.isVisible = false
-            pipSpace.isVisible = false
         }
 
         audioButton.setOnClickListener {
@@ -224,15 +224,15 @@ class PlayerActivity : BasePlayerActivity() {
         val lockedLayout = findViewById<FrameLayout>(R.id.locked_player_view)
 
         lockButton.setOnClickListener {
-            exoPlayerControlView.visibility = View.GONE
-            lockedLayout.visibility = View.VISIBLE
+            exoPlayerControlView.hideByFade()
+            lockedLayout.showByFade()
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LOCKED
             isControlsLocked = true
         }
 
         unlockButton.setOnClickListener {
-            exoPlayerControlView.visibility = View.VISIBLE
-            lockedLayout.visibility = View.GONE
+            exoPlayerControlView.showByFade()
+            lockedLayout.hideByFade()
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
             isControlsLocked = false
         }

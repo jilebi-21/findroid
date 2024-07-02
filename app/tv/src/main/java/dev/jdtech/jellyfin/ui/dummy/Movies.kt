@@ -57,6 +57,7 @@ val dummyMovie = FindroidMovie(
     images = FindroidImages(),
     chapters = null,
     trickplayInfo = null,
+    taglines = listOf("This is a sample tagline")
 )
 
 val dummyMovies = listOf(

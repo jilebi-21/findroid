@@ -229,7 +229,7 @@ private fun MovieScreenLayout(
                             modifier = Modifier.focusRequester(focusRequester),
                         ) {
                             Icon(
-                                painter = painterResource(id = CoreR.drawable.ic_play),
+                                painter = painterResource(id = CoreR.drawable.ic_play_filled),
                                 contentDescription = null,
                             )
                             Spacer(modifier = Modifier.width(6.dp))
