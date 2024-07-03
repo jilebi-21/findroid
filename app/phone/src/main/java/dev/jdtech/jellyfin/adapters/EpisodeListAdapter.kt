@@ -1,10 +1,8 @@
 package dev.jdtech.jellyfin.adapters
 
-import android.text.Html.fromHtml
-import android.util.TypedValue
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import androidx.core.text.HtmlCompat.fromHtml
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -40,13 +38,7 @@ class EpisodeListAdapter(
     class EpisodeViewHolder(private var binding: EpisodeItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(episode: FindroidEpisode) {
-            binding.episodeTitle.text = if (episode.indexNumberEnd == null) {
-                binding.root.context.getString(CoreR.string.episode_name, episode.indexNumber, episode.name)
-            } else {
-                binding.root.context.getString(CoreR.string.episode_name_with_end, episode.indexNumber, episode.indexNumberEnd, episode.name)
-            }
-
-            binding.episodeOverview.text = fromHtml(episode.overview, 0)
+            binding.episodeTitle.text = episode.name
 
             if (episode.playbackPositionTicks > 0) {
                 val progress = episode.playbackPositionTicks
@@ -54,12 +46,29 @@ class EpisodeListAdapter(
                     .times(binding.progressBar.max - binding.progressBar.min)
                     .toInt()
 
-                binding.progressBar.visibility = View.VISIBLE
                 binding.progressBar.progress = progress
+                binding.progressBar.isVisible = true
+                binding.gradientOverlay.isVisible = true
             } else {
-                binding.progressBar.visibility = View.GONE
+                binding.progressBar.isVisible = false
+                binding.gradientOverlay.isVisible = false
             }
 
+            binding.episodeNumber.text =
+                if (episode.indexNumberEnd == null) {
+                    binding.root.context.getString(
+                        CoreR.string.episode_number,
+                        "${episode.indexNumber}"
+                    )
+                } else {
+                    binding.root.context.getString(
+                        CoreR.string.episode_number,
+                        "${episode.indexNumber}-${episode.indexNumberEnd!!}",
+                    )
+                }
+
+
+            binding.episodeOverview.text = fromHtml(episode.overview, 0)
             binding.playedIcon.isVisible = episode.played
             binding.missingIcon.isVisible = episode.missing
             binding.downloadedIcon.isVisible = episode.isDownloaded()
@@ -89,6 +98,7 @@ class EpisodeListAdapter(
                     ),
                 )
             }
+
             ITEM_VIEW_TYPE_EPISODE -> {
                 EpisodeViewHolder(
                     EpisodeItemBinding.inflate(
@@ -98,6 +108,7 @@ class EpisodeListAdapter(
                     ),
                 )
             }
+
             else -> throw ClassCastException("Unknown viewType $viewType")
         }
     }
@@ -108,6 +119,7 @@ class EpisodeListAdapter(
                 val item = getItem(position) as EpisodeItem.Header
                 (holder as HeaderViewHolder).bind(item)
             }
+
             ITEM_VIEW_TYPE_EPISODE -> {
                 val item = getItem(position) as EpisodeItem.Episode
                 holder.itemView.setOnClickListener {

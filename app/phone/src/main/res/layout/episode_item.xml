@@ -3,22 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="wrap_content"
     android:layout_marginHorizontal="17dp"
-    android:layout_marginBottom="24dp"
+    android:layout_marginBottom="16dp"
     android:clickable="true"
     android:focusable="true"
     android:foreground="@drawable/ripple_background">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/episode_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Findroid.Image" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/episode_image"
+            android:layout_width="130dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,16:9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Findroid.Image"
+            android:scaleType="centerCrop" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/gradient_overlay"
+            android:layout_width="130dp"
+            android:layout_height="0dp"
+            android:background="@drawable/scrim_home_episode_item"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,16:9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Findroid.Image"
+            android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -62,7 +75,6 @@
                 android:text="M"
                 android:textColor="@android:color/white"
                 tools:ignore="HardcodedText" />
-
         </FrameLayout>
 
         <ImageView
@@ -77,12 +89,11 @@
             app:layout_constraintEnd_toEndOf="@id/episode_image"
             app:layout_constraintTop_toTopOf="@id/episode_image"
             app:tint="?attr/colorOnPrimary" />
-
     </LinearLayout>
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
         android:id="@+id/progress_bar"
-        android:layout_width="86dp"
+        android:layout_width="126dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_setup_background"
@@ -94,37 +105,60 @@
         app:layout_constraintEnd_toEndOf="@id/episode_image"
         app:layout_constraintStart_toStartOf="@id/episode_image"
         app:trackStopIndicatorSize="0dp"
+        tools:progress="40000"
         tools:visibility="visible" />
 
-    <TextView
-        android:id="@+id/episode_title"
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-        app:layout_constraintBottom_toTopOf="@id/episode_overview"
+        android:orientation="vertical"
+        android:paddingVertical="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/episode_image"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="1. To You, in 2000 Years: The Fall of Shiganshina, Part 1" />
+        app:layout_constraintVertical_bias="0">
 
-    <TextView
-        android:id="@+id/episode_overview"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:scrollbars="none"
-        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/episode_title"
-        app:layout_constraintTop_toBottomOf="@id/episode_title"
-        tools:text="After one hundred years of peace, humanity is suddenly reminded of the terror of being at the Titans' mercy. After one hundred years of peace, humanity is suddenly reminded of the terror of being at the Titans' mercy." />
+        <TextView
+            android:id="@+id/episode_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/episode_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/episode_title"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Episode 1" />
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="24dp"
-        android:background="@drawable/header_gradient"
-        app:layout_constraintBottom_toBottomOf="@id/episode_overview"
-        app:layout_constraintEnd_toEndOf="@id/episode_overview"
-        app:layout_constraintStart_toStartOf="@id/episode_overview" />
+        <TextView
+            android:id="@+id/episode_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/episode_image"
+            app:layout_constraintTop_toBottomOf="@id/episode_number"
+            tools:text="To You, in 2000 Years: The Fall of Shiganshina, Part 1" />
+
+        <TextView
+            android:id="@+id/episode_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:minLines="3"
+            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/episode_image"
+            app:layout_constraintTop_toBottomOf="@id/episode_number" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

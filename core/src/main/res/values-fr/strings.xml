@@ -66,7 +66,6 @@
     <string name="about">À propos</string>
     <string name="app_info">Infos sur l\'application</string>
     <string name="unknown_error">Erreur inconnue</string>
-    <string name="episode_name">%1$d. %2$s</string>
     <string name="mpv_player">Lecteur MPV</string>
     <string name="download_mobile_data">Télécharger via données mobiles</string>
     <string name="download_button_description">Télécharger</string>
@@ -83,7 +82,6 @@
     <string name="no_downloads">Vous n\'avez aucun téléchargement</string>
     <string name="settings_category_download">Téléchargements</string>
     <string name="privacy_policy">Politique de confidentialité</string>
-    <string name="episode_name_extended">S%1$d:E%2$d - %3$s</string>
     <string name="mpv_player_summary">Utiliser le lecteur MPV (expérimental). Ce lecteur supporte d\'avantage de codecs vidéos, audios et sous-titres.</string>
     <string name="app_description">Client natif officieux pour Jellyfin</string>
     <string name="add_server_error_no_id">Le serveur n\'a pas d\'ID, quelque chose semble ne pas fonctionner correctement sur le serveur</string>
@@ -149,8 +147,6 @@
     <string name="amoled_theme_summary">Utilisez le thème foncé AMOLED avec un fond purement noir</string>
     <string name="size">Taille</string>
     <string name="privacy_policy_notice">En utilisant Findroid vous acceptez la <a href="https://raw.githubusercontent.com/jarnedemeulemeester/findroid/main/PRIVACY">Politique de Confidentialité</a>indiquant que nous ne collectons pas vos données</string>
-    <string name="episode_name_extended_with_end">S%1$d:E%2$d-%3$d - %4$s</string>
-    <string name="episode_name_with_end">%1$d-%2$d. %3$s</string>
     <string name="external">Externe</string>
     <string name="select_storage_location">Choisissez un emplacement de stockage</string>
     <string name="storage_unavailable">L\'emplacement de stockage est indisponible</string>

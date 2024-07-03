@@ -95,8 +95,6 @@
     <string name="settings_preferred_subtitle_language">선호하는 자막 언어</string>
     <string name="settings_category_servers">서버</string>
     <string name="settings_category_player">플레이어</string>
-    <string name="episode_name">%1$d. %2$s</string>
-    <string name="episode_name_extended">S%1$d:E%2$d - %3$s</string>
     <string name="no_favorites">즐겨찾기 없음</string>
     <string name="no_search_results">검색 결과 없음</string>
     <string name="next_up">다음</string>
@@ -149,8 +147,6 @@
     <string name="audio">오디오</string>
     <string name="player_gestures_seek">제스처 탐색</string>
     <string name="player_gestures_seek_summary">화면 좌우로 스와이프하여 앞뒤로 이동</string>
-    <string name="episode_name_with_end">%1$d-%2$d. %3$s</string>
-    <string name="episode_name_extended_with_end">S%1$d:E%2$d-%3$d - %4$s</string>
     <string name="cancel_download_message">다운로드를 취소하시겠습니까\?</string>
     <string name="preparing_download">다운로드 준비 중</string>
     <string name="cancel_download">다운로드 취소</string>

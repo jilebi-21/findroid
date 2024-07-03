@@ -37,8 +37,6 @@
     <string name="check_button_description">Označit jako přehrané nebo nepřehrané</string>
     <string name="favorite_button_description">Do oblíbených</string>
     <string name="episode_watched_indicator">Indikátor shlédnutí epizody</string>
-    <string name="episode_name">%1$d. %2$s</string>
-    <string name="episode_name_extended">S%1$d:E%2$d - %3$s</string>
     <string name="next_up">Další na řadě</string>
     <string name="continue_watching">Pokračovat ve sledování</string>
     <string name="latest_library">Nejnovější %1$s</string>
@@ -78,8 +76,6 @@
     <string name="pref_player_mpv_hwdec">Dekódování hardwarem</string>
     <string name="pref_player_mpv_vo">Výstup videa</string>
     <string name="episodes_label">Epizody</string>
-    <string name="episode_name_with_end">%1$d-%2$d. %3$s</string>
-    <string name="episode_name_extended_with_end">S%1$d:E%2$d-%3$d - %4$s</string>
     <string name="stop_download">Zastavit stahování</string>
     <string name="add_server_error_no_id">Server nemá žádné ID, zdá se, že se serverem není něco v pořádku</string>
     <string name="login_error_wrong_username_password">Nesprávné uživatelské jméno nebo heslo</string>

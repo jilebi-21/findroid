@@ -40,8 +40,6 @@
     <string name="check_button_description">Marcar como visto o No visto</string>
     <string name="favorite_button_description">Favorito</string>
     <string name="episode_watched_indicator">Indicador de episodio visto</string>
-    <string name="episode_name">%1$d. %2$s</string>
-    <string name="episode_name_extended">T%1$d:E%2$d - %3$s</string>
     <string name="next_up">Siguiente</string>
     <string name="continue_watching">Continar viendo</string>
     <string name="latest_library">Reciente en %1$ss</string>
@@ -138,8 +136,6 @@
     <string name="remove_user_dialog_text">¿Está seguro de querer remover el usuario %1$s</string>
     <string name="amoled_theme_summary">Use el tema AMOLED con un fondo negro puro</string>
     <string name="size">Tamaño</string>
-    <string name="episode_name_with_end">%1$d-%2$d. %3$s</string>
-    <string name="episode_name_extended_with_end">T%1$d:E%2$d-%3$d - %4$s</string>
     <string name="privacy_policy_notice">Al usar Findroid, aceptas la <a href="https://raw.githubusercontent.com/jarnedemeulemeester/findroid/main/PRIVACY">política de privacidad</a>, la cual establece que no recopilamos ningún dato</string>
     <string name="stop_download">Detener descarga</string>
     <string name="external">Externo</string>

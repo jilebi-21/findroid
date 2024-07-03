@@ -90,10 +90,6 @@
     <string name="remove_server_address_dialog_text">%1$s sunucu adresini kaldırmak istediğinizden emin misiniz</string>
     <string name="error_loading_data">Veriler yüklenirken hata oluştu</string>
     <string name="cast_amp_crew">Oyuncular ve Ekip</string>
-    <string name="episode_name">%1$d. %2$s</string>
-    <string name="episode_name_extended">S%1$d:B%2$d - %3$s</string>
-    <string name="episode_name_extended_with_end">S%1$d:B%2$d-%3$d - %4$s</string>
-    <string name="episode_name_with_end">%1$d-%2$d. %3$s</string>
     <string name="series_poster">Dizi posteri</string>
     <string name="no_favorites">Hiç favoriniz yok</string>
     <string name="no_search_results">Arama sonucu bulunamadı</string>

@@ -37,8 +37,6 @@
     <string name="trailer_button_description">Изгледайте трейлъра</string>
     <string name="favorite_button_description">Любим</string>
     <string name="episode_watched_indicator">Индикатор за изгледан епизод</string>
-    <string name="episode_name">%1$d. %2$s</string>
-    <string name="episode_name_extended">С%1$d:Е%2$d - %3$s</string>
     <string name="next_up">Следва</string>
     <string name="continue_watching">Продължете да гледате</string>
     <string name="latest_library">Последният %1$s</string>
@@ -93,8 +91,6 @@
     <string name="seeking">Търсене</string>
     <string name="settings_request_timeout">Лимит на заявките (ms)</string>
     <string name="pref_player_mpv_ao">Изход на аудиото</string>
-    <string name="episode_name_with_end">%1$d-%2$d. %3$s</string>
-    <string name="episode_name_extended_with_end">S%1$d:E%2$d-%3$d - %4$s</string>
     <string name="image_description_backdrop">Фон на %1$s</string>
     <string name="users">Потребители</string>
     <string name="no_server_connection">Няма връзка към Jellyfin сървъра, за да гледате офлайн пуснете Режим без Интернет</string>

@@ -38,8 +38,6 @@
     <string name="trailer_button_description">Посмотреть трейлер</string>
     <string name="check_button_description">Отметить как просмотренное или непросмотренное</string>
     <string name="favorite_button_description">В избранное</string>
-    <string name="episode_name">%1$d. %2$s</string>
-    <string name="episode_name_extended">С%1$d:Э%2$d - %3$s</string>
     <string name="next_up">Далее</string>
     <string name="continue_watching">Продолжить просмотр</string>
     <string name="series_poster">Постер сериала</string>
@@ -150,8 +148,6 @@
     <string name="downloading_error">Ошибка во время скачивания</string>
     <string name="not_enough_storage">Для этого элемента требуется %1$s свободного места, но доступно только %2$s</string>
     <string name="no_server_connection">Нет соединения с сервером Jellyfin, для просмотра в автономном режиме включите Офлайн-Режим</string>
-    <string name="episode_name_extended_with_end">С%1$d:Э%2$d-%3$d - %4$s</string>
-    <string name="episode_name_with_end">%1$d:%2$d. %3$s</string>
     <string name="select_storage_location">Выбрать место хранения</string>
     <string name="storage_unavailable">Место хранения недоступно</string>
     <string name="internal">Внутреннее</string>

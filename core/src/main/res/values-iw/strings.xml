@@ -30,14 +30,12 @@
     <string name="cast_amp_crew">שחקנים &amp; צוות</string>
     <string name="seasons">עונות</string>
     <string name="favorite_button_description">מועדף</string>
-    <string name="episode_name">%1$d. %2$s</string>
     <string name="continue_watching">המשך לצפות</string>
     <string name="libraries">ספריות</string>
     <string name="genres">ז\'אנרים</string>
     <string name="play_button_description">נגן את המדיה</string>
     <string name="trailer_button_description">צפה בקדימון</string>
     <string name="episode_watched_indicator">מחוון צפייה בפרק</string>
-    <string name="episode_name_extended">ע%1$d:פ%2$d - %3$s</string>
     <string name="next_up">הבא בתור</string>
     <string name="director">במאי</string>
     <string name="no_favorites">אין לך מועדפים</string>
@@ -163,8 +161,6 @@
     <string name="downloading_error">אירעה שגיאה במהלך ההורדה</string>
     <string name="no_server_connection">אין חיבור לשרת ה-Jellyfin, כדי לצפות במצב לא מקוון, הפעל מצב לא מקוון</string>
     <string name="privacy_policy_notice">על ידי שימוש ב-Findroid הנך מסכים עם <a href="https://raw.githubusercontent.com/jarnedemeulemeester/findroid/main/PRIVACY">מדיניות הפרטיות</a> אשר מציינת כי איננו אוספים שום נתונים</string>
-    <string name="episode_name_with_end">%1$d-%2$d. %3$s</string>
-    <string name="episode_name_extended_with_end">ע%1$d:פ%2$d-%3$d - %4$s</string>
     <string name="storage_name">%1$s (%2$d מ\"ב פנויים)</string>
     <string name="app_language">שפת היישומון</string>
     <string name="downloaded_indicator">מחוון הורדה</string>
