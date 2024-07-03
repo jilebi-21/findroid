@@ -89,7 +89,6 @@
     <string name="ascending">עולה</string>
     <string name="select_video_version_title">בחר גרסה</string>
     <string name="track_selection">[%1$s] %2$s (%3$s)</string>
-    <string name="dynamic_colors">צבעים דינמיים</string>
     <string name="subtitles">כתוביות</string>
     <string name="theme_light">בהיר</string>
     <string name="theme_dark">כהה</string>
@@ -144,7 +143,6 @@
     <string name="player_gestures_vb_summary">החלק למעלה ולמטה בצידו הימני של המסך כדי לשנות את עוצמת השמע ובצידו השמאלי כדי לשנות את הבהירות</string>
     <string name="player_gestures_zoom_summary">צבוט כדי להציג את הוידאו במסך מלא</string>
     <string name="seek_back_increment">גודל קפיצה אחורה (מילי שניות)</string>
-    <string name="dynamic_colors_summary">השתמש בצבעים דינמיים של Material You (זמין רק בגרסת אנדרואיד 12 ומעלה)</string>
     <string name="size">גודל</string>
     <string name="offline_mode_icon">סמל מצב לא מקוון</string>
     <string name="not_enough_storage">פריט זה דורש %1$s של מקום פנוי אבל רק %2$s זמינים</string>

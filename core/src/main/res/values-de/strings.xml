@@ -107,8 +107,6 @@
     <string name="theme_light">Hell</string>
     <string name="theme_dark">Dunkel</string>
     <string name="episodes_label">Episoden</string>
-    <string name="dynamic_colors">Dynamische Farben</string>
-    <string name="dynamic_colors_summary">Dynamische Farben nutzen (ab Android 12 verfügbar)</string>
     <string name="player_gestures_vb">Lautsärke und Helligkeits-Gesten</string>
     <string name="player_gestures_zoom">Zoom Geste</string>
     <string name="player_gestures_zoom_summary">Ziehen um das Video an den Bildschirm anzupassen</string>

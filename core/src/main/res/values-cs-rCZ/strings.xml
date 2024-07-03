@@ -83,8 +83,6 @@
     <string name="remove_user_dialog_text">Jste si jistí, že chcete odebrat uživatele %1$s</string>
     <string name="close">Zavřít</string>
     <string name="theme_system">Podle systému</string>
-    <string name="dynamic_colors">Dynamické barvy</string>
-    <string name="dynamic_colors_summary">Použit dynamické barvy Material You (dostupné pouze v systému Android 12+)</string>
     <string name="seek_forward_increment">Posunout vpřed v (milisekundách)</string>
     <string name="cancel_download_message">Opravdu chcete stahování zrušit\?</string>
     <string name="video">Video</string>

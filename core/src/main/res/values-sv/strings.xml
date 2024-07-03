@@ -135,8 +135,6 @@
     <string name="sort_by_options_1">IMDB-betyg</string>
     <string name="sort_by_options_4">Datum spelat</string>
     <string name="select_video_version_title">Välj version</string>
-    <string name="dynamic_colors">Dynamiska färger</string>
-    <string name="dynamic_colors_summary">Använd Material You dynamiska färger (endast tillgängligt på Android 12+)</string>
     <string name="subtitles_summary">Anpassa textningens utseende</string>
     <string name="settings_category_network">Nätverk</string>
     <string name="settings_socket_timeout">Timeout för socket (ms)</string>

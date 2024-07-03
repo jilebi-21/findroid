@@ -104,8 +104,6 @@
     <string name="player_gestures_vb">Gesty kontroli głośności i jasności ekranu</string>
     <string name="player_gestures_zoom">Gest przybliżenia</string>
     <string name="player_gestures_zoom_summary">Uszczypnij by wypełnić ekran</string>
-    <string name="dynamic_colors">Dynamiczne kolory</string>
-    <string name="dynamic_colors_summary">Użyj dynamicznych kolorów Material You (dostępne tylko w Android 12+)</string>
     <string name="libraries">Biblioteki</string>
     <string name="pref_player_mpv_hwdec">Dekodowanie sprzętowe</string>
     <string name="settings_category_network">Sieć</string>

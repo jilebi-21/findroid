@@ -86,8 +86,6 @@
     <string name="seeking">iskanje</string>
     <string name="seek_back_increment">Iskanja nazaj (ms)</string>
     <string name="seek_forward_increment">Iskanja naprej (ms)</string>
-    <string name="dynamic_colors">Dinamične barve</string>
-    <string name="dynamic_colors_summary">Uporabite dinamične barve Material You (na voljo samo v sistemih novejših od Android 12)</string>
     <string name="subtitles">Podnapisi</string>
     <string name="subtitles_summary">Prilagodite videz podnapisov</string>
     <string name="theme_system">Sledi sistemu</string>

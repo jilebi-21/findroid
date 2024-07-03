@@ -86,7 +86,6 @@
     <string name="seeking">Pretáčanie</string>
     <string name="seek_back_increment">Velkosť pretočenia dozadu (ms)</string>
     <string name="seek_forward_increment">Velkosť pretočenia dopredu (ms)</string>
-    <string name="dynamic_colors">Dynamické farby</string>
     <string name="subtitles">Titulky</string>
     <string name="subtitles_summary">Prispôsobiť vzhľad titulkov</string>
     <string name="theme_system">Podľa systému</string>
@@ -134,7 +133,6 @@
     <string name="image_description_poster">%1$s plagát</string>
     <string name="player_gestures_vb_summary">Potiahnite prstom hore a dole na pravej strane obrazovky na nastavenie hlasitosti a na ľavej na zmenu jasu</string>
     <string name="sort_by_options_5">Dátum vydania</string>
-    <string name="dynamic_colors_summary">Použiť dynamické farby Dynamic You (iba pre Android 12+)</string>
     <string name="add_user">Pridať používateľa</string>
     <string name="video">Video</string>
     <string name="audio">Audio</string>

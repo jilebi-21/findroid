@@ -87,7 +87,6 @@
     <string name="seeking">Tua</string>
     <string name="seek_back_increment">Gia số tua lùi (ms)</string>
     <string name="seek_forward_increment">Gia số tua tới (ms)</string>
-    <string name="dynamic_colors">Đổi màu động</string>
     <string name="subtitles">Phụ đề</string>
     <string name="subtitles_summary">Tùy chình diện mạo của phụ đề</string>
     <string name="theme_system">Theo hệ thống</string>
@@ -129,7 +128,6 @@
     <string name="sort_by_options_0">Tiêu đề</string>
     <string name="sort_by_options_3">Ngày được thêm vào</string>
     <string name="sort_by_options_2">Phân loại phim bởi phụ huynh</string>
-    <string name="dynamic_colors_summary">Dùng hệ thống đổi màu động của ngôn ngữ thiết kế Material You (chỉ khả dụng cho Android 12+)</string>
     <string name="settings_connect_timeout">Thời gian kết nối hết hạn (ms)</string>
     <string name="add_user">Thêm người dùng</string>
     <string name="pref_player_intro_skipper">Bỏ qua đoạn mở đầu</string>

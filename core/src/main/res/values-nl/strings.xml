@@ -42,8 +42,6 @@
     <string name="theme_dark">Donker</string>
     <string name="episodes_label">Afleveringen</string>
     <string name="sort_by_options_0">Titel</string>
-    <string name="dynamic_colors_summary">Gebruik je eigen dynamische kleuren (alleen beschikbaar op Android 12+)</string>
-    <string name="dynamic_colors">Dynamische kleuren</string>
     <string name="player_gestures_vb">Volume en felheid gebaren</string>
     <string name="player_gestures_zoom">Zoom beweging</string>
     <string name="player_gestures_vb_summary">Veeg aan de rechterkant van het scherm omhoog en omlaag om het volume te wijzigen en aan de linkerkant om de helderheid te wijzigen</string>

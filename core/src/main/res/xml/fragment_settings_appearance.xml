@@ -8,11 +8,6 @@
         app:title="@string/theme"
         app:useSimpleSummaryProvider="true" />
     <SwitchPreferenceCompat
-        app:defaultValue="true"
-        app:key="dynamic_colors"
-        app:summary="@string/dynamic_colors_summary"
-        app:title="@string/dynamic_colors" />
-    <SwitchPreferenceCompat
         app:defaultValue="false"
         app:key="pref_amoled_theme"
         app:summary="@string/amoled_theme_summary"

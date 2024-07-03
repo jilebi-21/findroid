@@ -109,7 +109,6 @@
     <string name="ascending">Artan</string>
     <string name="runtime_minutes">%1$d dakika</string>
     <string name="select_video_version_title">Sürüm seçiniz</string>
-    <string name="dynamic_colors">Dinamik renkler</string>
     <string name="subtitles_summary">Altyazıların görünümünü özelleştir</string>
     <string name="settings_category_network">Ağ</string>
     <string name="settings_cache_size">Önbellek boyutu (MB)</string>

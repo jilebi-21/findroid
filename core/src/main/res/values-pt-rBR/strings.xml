@@ -102,8 +102,6 @@
     <string name="player_gestures">Gestos do reprodutor</string>
     <string name="player_brightness_remember">Lembrar nível de brilho</string>
     <string name="sort_by_options_0">Título</string>
-    <string name="dynamic_colors_summary">Usar cores dinâmicas do Material You (disponível apenas no Android 12+)</string>
-    <string name="dynamic_colors">Cores dinâmicas</string>
     <string name="player_gestures_vb">Gestos de volume e brilho</string>
     <string name="player_gestures_zoom">Gestos de zoom</string>
     <string name="player_gestures_vb_summary">Deslize para cima e para baixo no lado direito da tela para alterar o volume e no lado esquerdo para alterar o brilho</string>

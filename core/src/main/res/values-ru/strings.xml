@@ -123,8 +123,6 @@
     <string name="image_description_backdrop">%1$s фон</string>
     <string name="seeking">Перемотка</string>
     <string name="player_gestures_zoom_summary">Ущипните, чтобы растянуть видео на весь экран</string>
-    <string name="dynamic_colors">Динамические цвета</string>
-    <string name="dynamic_colors_summary">Использовать динамические цвета Material You (доступно только на Android 12+)</string>
     <string name="users">Пользователи</string>
     <string name="add_user">Добавить пользователя</string>
     <string name="remove_user">Удалить пользователя</string>

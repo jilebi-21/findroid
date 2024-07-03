@@ -120,7 +120,6 @@
     <string name="theme_light">Világos</string>
     <string name="theme_dark">Sötét</string>
     <string name="settings_category_network">Hálózat</string>
-    <string name="dynamic_colors_summary">Használja a Material You dinamikus színeit (Csak Android 12+-on érhető el)</string>
     <string name="theme_system">Kövesd a rendszert</string>
     <string name="seek_forward_increment">Előre seekelési sebesség növekedése (ms)</string>
     <string name="settings_connect_timeout">Csatlakozási időtúllépés (ms)</string>
@@ -128,7 +127,6 @@
     <string name="pref_player_mpv_hwdec">Hardveres dekódolás</string>
     <string name="settings_socket_timeout">Socket időtúllépése (ms)</string>
     <string name="settings_request_timeout">Lekérdezési idő túllépés (ms)</string>
-    <string name="dynamic_colors">Dinamikus színek</string>
     <string name="seek_back_increment">Vissza seekelési sebesség növekedése (ms)</string>
     <string name="users">Felhasználók</string>
     <string name="remove_user">Felhasználó eltávolítása</string>

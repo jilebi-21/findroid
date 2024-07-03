@@ -41,13 +41,6 @@ class BaseApplication : Application(), Configuration.Provider, ImageLoaderFactor
             "light" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             "dark" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         }
-
-        if (appPreferences.dynamicColors) {
-            val dynamicColorsOptions = DynamicColorsOptions.Builder()
-                .setThemeOverlay(CoreR.style.ThemeOverlay_Findroid_DynamicColors)
-                .build()
-            DynamicColors.applyToActivitiesIfAvailable(this, dynamicColorsOptions)
-        }
     }
 
     override fun newImageLoader(): ImageLoader {

@@ -96,7 +96,6 @@
     <string name="no_server_connection">Няма връзка към Jellyfin сървъра, за да гледате офлайн пуснете Режим без Интернет</string>
     <string name="privacy_policy_notice">При ползването на Findroid, вие се съгласявате с <a href="https://raw.githubusercontent.com/jarnedemeulemeester/findroid/main/PRIVACY">Политиката за поверителност</a> , която гласи, че не събираме никаква информация</string>
     <string name="app_description">Неофициално приложение за Jellyfin с \"native\" елементи</string>
-    <string name="dynamic_colors">Динамични цветове</string>
     <string name="person_detail_title">Детайли</string>
     <string name="player_gestures_zoom_summary">Плъзнете с два пръста, за да изпълните екрана</string>
     <string name="player_brightness_remember">Запомни ниво на яркост</string>
@@ -129,7 +128,6 @@
     <string name="player_gestures">Жестове на плейъра</string>
     <string name="player_gestures_vb">Жестове за яркост и звук</string>
     <string name="sort_by_options_0">Заглавие</string>
-    <string name="dynamic_colors_summary">Използвай динамични Material You цветове (възможно единствено на Android 12+)</string>
     <string name="sort_by_options_2">Оценка за родителски контрол</string>
     <string name="sort_by_options_4">Дата пускан</string>
     <string name="seek_forward_increment">Инкремент за пропускане напред(ms)</string>

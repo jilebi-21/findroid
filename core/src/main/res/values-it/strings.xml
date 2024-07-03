@@ -110,8 +110,6 @@
     <string name="subtitles">Sottotitoli</string>
     <string name="subtitles_summary">Personalizza lo stile dei sottotitoli</string>
     <string name="libraries">Librerie</string>
-    <string name="dynamic_colors">Colori dinamici</string>
-    <string name="dynamic_colors_summary">Usa i colori dinamici Material You (disponibile solo per Android 12+)</string>
     <string name="remove_user">Rimuovi utente</string>
     <string name="remove_user_dialog_text">Sei sicuro di voler rimuovere l\'utente %1$s</string>
     <string name="episodes_label">Episodi</string>

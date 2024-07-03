@@ -108,8 +108,6 @@
     <string name="seeking">Buscando</string>
     <string name="seek_back_increment">Incremento del retroceso (ms)</string>
     <string name="seek_forward_increment">Incremento del adelanto (ms)</string>
-    <string name="dynamic_colors">Colores dinámicos</string>
-    <string name="dynamic_colors_summary">Usar colores dinámicos de Material You (sólo disponible en Android 12+)</string>
     <string name="subtitles">Subtítulos</string>
     <string name="subtitles_summary">Personalizar apariencia de subtítulos</string>
     <string name="theme_system">Seguir al sistema</string>

@@ -65,8 +65,6 @@
     <string name="ascending">Ascendent</string>
     <string name="descending">Descendent</string>
     <string name="select_video_version_title">Selectează versiunea</string>
-    <string name="dynamic_colors">Culori dinamice</string>
-    <string name="dynamic_colors_summary">Folosește culorile dinamice Material You (disponibil doar pe Android 12+)</string>
     <string name="amoled_theme">Tema întunecată AMOLED</string>
     <string name="amoled_theme_summary">Folsește tema AMOLED cu un fundal negru</string>
     <string name="subtitles">Subtitrări</string>
