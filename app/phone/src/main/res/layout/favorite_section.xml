@@ -11,7 +11,7 @@
         android:id="@+id/section_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="17dp"
         android:layout_marginBottom="12dp"
         android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
         android:textSize="18sp"
