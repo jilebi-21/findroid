@@ -13,6 +13,8 @@
         android:id="@+id/media_info_scrollview"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:visibility="gone"
+        tools:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
