@@ -51,7 +51,6 @@
     <string name="settings_category_cache">Bộ nhớ đệm</string>
     <string name="settings_use_cache_title">Ảnh đệm</string>
     <string name="settings_cache_size">Kích thước bộ nhớ đệm (MB)</string>
-    <string name="theme">Chủ đề</string>
     <string name="error_preparing_player_items">Có lỗi chuẩn bị tệp để phát.</string>
     <string name="view_details_underlined"><u>Xem chi tiết</u></string>
     <string name="about">Về</string>
@@ -89,9 +88,6 @@
     <string name="seek_forward_increment">Gia số tua tới (ms)</string>
     <string name="subtitles">Phụ đề</string>
     <string name="subtitles_summary">Tùy chình diện mạo của phụ đề</string>
-    <string name="theme_system">Theo hệ thống</string>
-    <string name="theme_light">Sáng</string>
-    <string name="theme_dark">Tối</string>
     <string name="settings_category_network">Mạng</string>
     <string name="settings_request_timeout">Thời gian yêu cầu hết hạn (ms)</string>
     <string name="settings_socket_timeout">Thời gian socket hết hạn (ms)</string>
@@ -154,8 +150,6 @@
     <string name="video">Video</string>
     <string name="extra_info_summary">Hiển thị thêm các thông tin về âm thanh, video và phụ đề</string>
     <string name="storage_name">%1$s (%2$d MB trống)</string>
-    <string name="amoled_theme">Chủ đề màu tối (AMOLED)</string>
-    <string name="amoled_theme_summary">Sử dụng chủ đề cho màn hình AMOLED với nền màu đen tuyệt đối</string>
     <string name="remove_server_address">Xoá địa chỉ máy chủ</string>
     <string name="downloaded_indicator">Dấu hiệu đã tải về</string>
     <string name="remove_server_address_dialog_text">Bạn có chắc chắn muốn xoá địa chỉ máy chủ %1$s không</string>

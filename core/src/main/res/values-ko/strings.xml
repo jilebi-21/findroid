@@ -3,7 +3,6 @@
     <string name="remove_server">서버 제거</string>
     <string name="settings_use_cache_title">캐시 이미지</string>
     <string name="settings_category_cache">캐시</string>
-    <string name="theme">테마</string>
     <string name="error_preparing_player_items">플레이어 항목을 불러오는 중 오류가 발생했습니다.</string>
     <string name="view_details">자세히 보기</string>
     <string name="settings_cache_size">캐시 용량 (MB)</string>
@@ -110,9 +109,6 @@
     <string name="libraries">라이브러리</string>
     <string name="subtitles">자막</string>
     <string name="subtitles_summary">자막 스타일 커스텀</string>
-    <string name="theme_system">기기 테마와 동기화</string>
-    <string name="theme_light">라이트 모드</string>
-    <string name="theme_dark">다크 모드</string>
     <string name="episodes_label">에피소드</string>
     <string name="remove_user_dialog_text">정말로 %1$s 유저를 제거하시겠습니까\?</string>
     <string name="settings_category_network">네트워크</string>
@@ -148,8 +144,6 @@
     <string name="cancel_download_message">다운로드를 취소하시겠습니까\?</string>
     <string name="preparing_download">다운로드 준비 중</string>
     <string name="cancel_download">다운로드 취소</string>
-    <string name="amoled_theme_summary">완전한 검은색 배경인 AMOLED 테마를 사용</string>
-    <string name="amoled_theme">AMOLED 다크 테마</string>
     <string name="offline_mode_icon">오프라인 모드 아이콘</string>
     <string name="app_language">앱 언어</string>
     <string name="subtitle">자막</string>

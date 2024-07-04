@@ -11,17 +11,18 @@
 
     <!-- Preferences theme overlay to use new switch style, taken from Material Components Catalog example. -->
     <style name="ThemeOverlay.Findroid.Preference" parent="PreferenceThemeOverlay">
-        <item name="switchPreferenceCompatStyle">@style/Preference.SwitchPreferenceCompat.Catalog</item>
+        <item name="switchPreferenceCompatStyle">@style/Preference.SwitchPreferenceCompat.Catalog
+        </item>
     </style>
 
     <style name="Preference.SwitchPreferenceCompat.Catalog" parent="Preference.SwitchPreferenceCompat.Material">
         <item name="android:widgetLayout">@layout/preference_material3_switch</item>
     </style>
 
-    <style name="GenreChip" parent="Widget.Material3.Chip.Assist">
+    <style name="ThemeX.ChipStyle" parent="Widget.Material3.Chip.Assist">
         <item name="android:textAppearance">@style/TextAppearance.Material3.LabelMedium</item>
         <item name="android:textStyle">bold</item>
-        <item name="chipBackgroundColor">?attr/colorSecondaryContainer</item>
+        <item name="chipBackgroundColor">?colorSurfaceVariant</item>
         <item name="chipCornerRadius">6dp</item>
         <item name="chipEndPadding">0dp</item>
         <item name="chipStartPadding">0dp</item>
@@ -29,8 +30,40 @@
         <item name="chipStrokeWidth">0dp</item>
     </style>
 
-    <style name="BottomNavStyle" parent="Widget.Material3.BottomNavigationView">
+    <style name="ThemeX.IconTonalButton" parent="Widget.Material3.Button.IconButton.Filled.Tonal">
+        <item name="iconTint">?textColorPrimary</item>
+    </style>
+
+    <style name="ThemeX.BottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
         <item name="itemIconSize">22dp</item>
     </style>
 
+    <style name="ThemeX.NavigationRailStyle" parent="Widget.MaterialComponents.NavigationRailView">
+        <item name="itemIconSize">22dp</item>
+    </style>
+
+    <style name="ThemeX.LinearProgressIndicator" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="indicatorTrackGapSize">0dp</item>
+        <item name="trackStopIndicatorSize">0dp</item>
+        <item name="trackColor">?colorSurfaceVariant</item>
+    </style>
+
+    <style name="ThemeX.LoadingProgressStyle" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="android:indeterminate">true</item>
+        <item name="trackColor">?colorSurfaceVariant</item>
+        <item name="indicatorColor">?colorAccent</item>
+    </style>
+
+    <style name="ThemeX.ButtonBarButtonStyle" parent="Widget.Material3.Button.TextButton">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Findroid.Corner.Small</item>
+    </style>
+
+    <style name="ThemeX.AlertDialogTheme" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorBackgroundFloating">@color/surface_variant</item>
+        <item name="buttonBarPositiveButtonStyle">@style/ThemeX.ButtonBarButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/ThemeX.ButtonBarButtonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/ThemeX.ButtonBarButtonStyle</item>
+        <item name="dialogCornerRadius">12dp</item>
+    </style>
 </resources>

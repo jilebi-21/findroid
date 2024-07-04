@@ -34,8 +34,6 @@ object Constants {
     const val PREF_SUBTITLE_LANGUAGE = "pref_subtitle_language"
     const val PREF_IMAGE_CACHE = "pref_image_cache"
     const val PREF_IMAGE_CACHE_SIZE = "pref_image_cache_size"
-    const val PREF_THEME = "theme"
-    const val PREF_AMOLED_THEME = "pref_amoled_theme"
     const val PREF_NETWORK_REQUEST_TIMEOUT = "pref_network_request_timeout"
     const val PREF_NETWORK_CONNECT_TIMEOUT = "pref_network_connect_timeout"
     const val PREF_NETWORK_SOCKET_TIMEOUT = "pref_network_socket_timeout"

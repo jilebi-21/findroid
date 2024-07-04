@@ -58,7 +58,6 @@
     <string name="download_roaming">Transferir em roaming</string>
     <string name="privacy_policy">Política de Privacidade</string>
     <string name="view_details_underlined"><u>Ver detalhes</u></string>
-    <string name="theme">Tema</string>
     <string name="view_details">Ver detalhes</string>
     <string name="movies_label">Filmes</string>
     <string name="shows_label">Séries</string>
@@ -88,15 +87,12 @@
     <string name="sort_by_options_5">Data de Lançamento</string>
     <string name="player_brightness_remember">Lembrar o nível de brilho</string>
     <string name="player_gestures_zoom_summary">Clique para preencher o ecrã com o vídeo</string>
-    <string name="theme_system">Seguir sistema</string>
     <string name="seeking">Procura</string>
     <string name="subtitles">Legendas</string>
     <string name="seek_back_increment">Procurar incremento de volta (ms)</string>
     <string name="seek_forward_increment">Procure o incremento para a frente (ms)</string>
     <string name="subtitles_summary">Personalizar o aspecto das legendas</string>
     <string name="settings_category_network">Rede</string>
-    <string name="theme_dark">Escuro</string>
-    <string name="theme_light">Claro</string>
     <string name="settings_request_timeout">Pedido de tempo limite (ms)</string>
     <string name="settings_connect_timeout">Tempo limite de conexão (ms)</string>
     <string name="settings_socket_timeout">Tempo limite do soquete (ms)</string>
@@ -131,8 +127,6 @@
     <string name="player_gestures_seek">Procure gesto</string>
     <string name="player_gestures_seek_summary">Deslize horizontalmente para avançar ou retroceder</string>
     <string name="add_user">Adicionar usuário</string>
-    <string name="amoled_theme">Tema escuro AMOLED</string>
-    <string name="amoled_theme_summary">Use tema AMOLED com fundo preto puro</string>
     <string name="track_selection">[%1$s] %2$s (%3$s)</string>
     <string name="users">Usuários</string>
     <string name="app_language">Idioma do aplicativo</string>

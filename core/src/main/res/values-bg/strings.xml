@@ -65,7 +65,6 @@
     <string name="settings_category_cache">Кеш</string>
     <string name="settings_use_cache_title">Кеширани снимки</string>
     <string name="settings_cache_size">Размер на Кеша (МБ)</string>
-    <string name="theme">Тема</string>
     <string name="error_preparing_player_items">Проблем при подготовката на елементите на плейъра.</string>
     <string name="view_details">Вижте детайли</string>
     <string name="view_details_underlined"><u>Вижте детайли</u></string>
@@ -114,11 +113,7 @@
     <string name="offline_mode_icon">Режим без Интернет иконка</string>
     <string name="offline_mode_go_online">Свържи се с Интернет</string>
     <string name="select_storage_location">Изберете локация на диска</string>
-    <string name="theme_light">Светла</string>
-    <string name="amoled_theme_summary">Използвайте AMOLED тема с чисто черен фон</string>
-    <string name="theme_system">Следвай системата</string>
     <string name="libraries">Библиотеки</string>
-    <string name="amoled_theme">AMOLED тъмна тема</string>
     <string name="player_gestures_seek">Жест за търсене</string>
     <string name="player_gestures_seek_summary">Плъзнете хоризонтално, за да върнете назад или да пропуснете напред</string>
     <string name="downloaded_indicator">Индикатор за сваленост</string>
@@ -152,7 +147,6 @@
     <string name="remove_server_address_dialog_text">Сигурни ли сте, че искате да премахнете адреса на сървъра %1$s</string>
     <string name="sort_by_options_5">Дата на издаване</string>
     <string name="select_video_version_title">Изберете версия</string>
-    <string name="theme_dark">Тъмна</string>
     <string name="pref_player_intro_skipper">Пропускане на интрота</string>
     <string name="addresses">Адреси</string>
     <string name="add_server_address">Добави адрес на сървър</string>

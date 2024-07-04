@@ -48,7 +48,6 @@
     <string name="settings_category_cache">Cache</string>
     <string name="settings_use_cache_title">Cache de imagens</string>
     <string name="settings_cache_size">Tamanho do cache (MB)</string>
-    <string name="theme">Tema</string>
     <string name="error_preparing_player_items">Erro ao preparar itens para serem reproduzidos.</string>
     <string name="view_details">Ver detalhes</string>
     <string name="view_details_underlined"><u>Ver detalhes</u></string>
@@ -90,9 +89,6 @@
     <string name="subtitles">Legendas</string>
     <string name="subtitles_summary">Personalize a aparência das legendas</string>
     <string name="sort_by_options_2">Classificação Etária</string>
-    <string name="theme_system">Usar configurações do sistema</string>
-    <string name="theme_light">Claro</string>
-    <string name="theme_dark">Escuro</string>
     <string name="app_description">Aplicação Jellyfin nativa de terceiros</string>
     <string name="latest_library">%1$s mais recentes</string>
     <string name="jellyfin_banner">Banner Jellyfin</string>
@@ -139,8 +135,6 @@
     <string name="extra_info_summary">Exibe informações detalhadas sobre áudio, vídeo e legendas</string>
     <string name="subtitle">Legendas</string>
     <string name="extra_info">Exibir informações extras</string>
-    <string name="amoled_theme">Tema escuro AMOLED</string>
-    <string name="amoled_theme_summary">Use o tema AMOLED com um fundo preto</string>
     <string name="player_gestures_seek">Gesto de buscar</string>
     <string name="player_gestures_seek_summary">Deslize horizontalmente para buscar para frente ou para trás</string>
     <string name="offline_mode_icon">Ícone do modo offline</string>

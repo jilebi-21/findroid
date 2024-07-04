@@ -56,7 +56,6 @@
     <string name="settings_use_cache_summary">Cachování obrázků urychluje načítání obsahu. Projeví se po restartu aplikace.</string>
     <string name="settings_cache_size">Nastavit velikost mezipaměti v MB</string>
     <string name="settings_cache_size_message">Aplikace použije tuto velikost v MB k uložení obrázků z Jellyfin serveru. Větší hodnota může být prospěšná na pomalejším připojení.</string>
-    <string name="theme">Téma</string>
     <string name="error_preparing_player_items">Chyba při načítání přehrávání.</string>
     <string name="view_details">Zobrazit detaily</string>
     <string name="view_details_underlined"><u>Zobrazit detaily</u></string>
@@ -82,7 +81,6 @@
     <string name="remove_user">Odebrat uživatele</string>
     <string name="remove_user_dialog_text">Jste si jistí, že chcete odebrat uživatele %1$s</string>
     <string name="close">Zavřít</string>
-    <string name="theme_system">Podle systému</string>
     <string name="seek_forward_increment">Posunout vpřed v (milisekundách)</string>
     <string name="cancel_download_message">Opravdu chcete stahování zrušit\?</string>
     <string name="video">Video</string>
@@ -96,7 +94,6 @@
     <string name="quick_connect">Rychlé připojení</string>
     <string name="audio">Zvuk</string>
     <string name="subtitle">Titulky</string>
-    <string name="amoled_theme">Černý motiv AMOLED</string>
     <string name="libraries">Knihovny</string>
     <string name="sort_by_options_5">Datum vydání</string>
     <string name="extra_info">Zobrazit více podrobností</string>
@@ -114,10 +111,7 @@
     <string name="sort_by_options_0">Název</string>
     <string name="runtime_minutes">%1$d minut</string>
     <string name="track_selection">[%1$s] %2$s (%3$s)</string>
-    <string name="theme_light">Světlý</string>
-    <string name="theme_dark">Tmavý</string>
     <string name="seek_back_increment">Posunout zpět (ms)</string>
-    <string name="amoled_theme_summary">Použití motivu AMOLED s čistě černým pozadím</string>
     <string name="users">Uživatelé</string>
     <string name="add_user">Přidat uživatele</string>
     <string name="addresses">Adresy</string>

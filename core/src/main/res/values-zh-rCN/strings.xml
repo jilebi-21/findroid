@@ -46,7 +46,6 @@
     <string name="settings_category_device">设备</string>
     <string name="settings_category_cache">缓存</string>
     <string name="settings_use_cache_title">缓存的图片</string>
-    <string name="theme">主题</string>
     <string name="error_preparing_player_items">准备播放器条目时发生错误。</string>
     <string name="view_details">查看详细</string>
     <string name="view_details_underlined"><u>查看详细</u></string>
@@ -110,9 +109,6 @@
     <string name="subtitles">字幕</string>
     <string name="subtitles_summary">自定义字幕外观</string>
     <string name="libraries">库</string>
-    <string name="theme_system">跟随系统</string>
-    <string name="theme_light">浅色</string>
-    <string name="theme_dark">深色</string>
     <string name="episodes_label">季</string>
     <string name="remove_user">移除用户</string>
     <string name="remove_user_dialog_text">您确定要移除用户%1$s吗</string>
@@ -141,8 +137,6 @@
     <string name="extra_info">显示额外信息</string>
     <string name="extra_info_summary">显示关于音频、视频和字幕的详细信息</string>
     <string name="temp">temp</string>
-    <string name="amoled_theme">AMOLED 深色模式</string>
-    <string name="amoled_theme_summary">使用带有纯黑背景的 AMOLED 主题</string>
     <string name="offline_mode_go_online">上线</string>
     <string name="no_server_connection">未连接到 Jellyfin 服务器，要离线观看请启用离线模式</string>
     <string name="select_storage_location">选择存储位置</string>

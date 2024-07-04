@@ -34,7 +34,6 @@
     <string name="settings_category_cache">Cache</string>
     <string name="settings_use_cache_title">Imagini cache</string>
     <string name="settings_cache_size">Dimensiunea cache (MB)</string>
-    <string name="theme">Temă</string>
     <string name="error_preparing_player_items">Eroare la pregătirea elementelor player-ului.</string>
     <string name="about">Despre aplicație</string>
     <string name="privacy_policy">Politica de confidențialitate</string>
@@ -65,12 +64,7 @@
     <string name="ascending">Ascendent</string>
     <string name="descending">Descendent</string>
     <string name="select_video_version_title">Selectează versiunea</string>
-    <string name="amoled_theme">Tema întunecată AMOLED</string>
-    <string name="amoled_theme_summary">Folsește tema AMOLED cu un fundal negru</string>
     <string name="subtitles">Subtitrări</string>
-    <string name="theme_system">Urmărește sistemul</string>
-    <string name="theme_light">Deschisă</string>
-    <string name="theme_dark">Întunecată</string>
     <string name="settings_category_network">Rețea</string>
     <string name="users">Utilizatori</string>
     <string name="add_user">Adaugă un utilizator</string>

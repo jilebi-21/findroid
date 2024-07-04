@@ -61,7 +61,6 @@
     <string name="settings_use_cache_summary">Almacenar imágenes localmente acelera los tiempos de carga. Tomará efecto al reiniciar la app.</string>
     <string name="settings_cache_size">Tamaño de caché (MB)</string>
     <string name="settings_cache_size_message">La app usará esta cantidad de MB del almacenamiento interno para las imágenes. Valores grandes pueden ayudar en redes lentas.</string>
-    <string name="theme">Tema</string>
     <string name="error_preparing_player_items">Error preparando elementos.</string>
     <string name="view_details">Ver detalles</string>
     <string name="view_details_underlined"><u>Ver detalles</u></string>
@@ -111,9 +110,6 @@
     <string name="subtitles">Subtítulos</string>
     <string name="subtitles_summary">Personalizar apariencia de subtítulos</string>
     <string name="episodes_label">Episodios</string>
-    <string name="theme_system">Seguir al sistema</string>
-    <string name="theme_light">Claro</string>
-    <string name="theme_dark">Oscuro</string>
     <string name="settings_category_network">Red</string>
     <string name="pref_player_mpv_hwdec">Decodificación por hardware</string>
     <string name="pref_player_mpv_vo">Salida de vídeo</string>
@@ -149,8 +145,6 @@
     <string name="subtitle_chip_text">CC</string>
     <string name="temp">temp</string>
     <string name="extra_info">Mostrar info extra</string>
-    <string name="amoled_theme">Tema oscuro AMOLED</string>
-    <string name="amoled_theme_summary">Usa tema oscuro AMOLED con un fondo en negro puro</string>
     <string name="player_gestures_seek">Gesto de búsqueda</string>
     <string name="player_gestures_seek_summary">Deslizar horizontalmente para buscar adelante o atrás</string>
     <string name="downloaded_indicator">Indicador de descargado</string>

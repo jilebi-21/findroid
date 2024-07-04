@@ -61,7 +61,6 @@
     <string name="play_button_description">Odtwórz media</string>
     <string name="trailer_button_description">Obejrzyj zwiastun</string>
     <string name="favorite_button_description">Polub</string>
-    <string name="theme">Motyw</string>
     <string name="error_preparing_player_items">Błąd ładowania elementów odtwarzacza.</string>
     <string name="view_details">Zobacz szczegóły</string>
     <string name="series_poster">Plakat serialu</string>
@@ -113,9 +112,6 @@
     <string name="subtitles_summary">Dostosuj wygląd napisów</string>
     <string name="subtitles">Napisy</string>
     <string name="seeking">Przesuwanie</string>
-    <string name="theme_system">Zgodnie z systemem</string>
-    <string name="theme_light">Jasny</string>
-    <string name="theme_dark">Ciemny</string>
     <string name="episodes_label">Odcinki</string>
     <string name="add_user">Dodaj użytkownika</string>
     <string name="pref_player_mpv_vo">Wyjście wideo</string>
@@ -141,8 +137,6 @@
     <string name="temp">temp</string>
     <string name="video">Wideo</string>
     <string name="extra_info_summary">Wyświetla szczegółowe informacje o audio, wideo i napisach</string>
-    <string name="amoled_theme">Ciemny motyw AMOLED</string>
-    <string name="amoled_theme_summary">Użyj motywu AMOLED z czystym czarnym tłem</string>
     <string name="offline_mode">Tryb offline</string>
     <string name="offline_mode_icon">Ikona trybu offline</string>
     <string name="downloaded_indicator">Wskaźnik pobierania</string>

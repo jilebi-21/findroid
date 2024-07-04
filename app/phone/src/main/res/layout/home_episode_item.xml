@@ -62,9 +62,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:alpha="0.75"
         android:ellipsize="end"
         android:maxLines="1"
         android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+        android:textColor="?textColorPrimary"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/progress_bar"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,11 +96,9 @@
         android:indeterminate="false"
         android:max="100000"
         android:visibility="gone"
-        app:indicatorTrackGapSize="0dp"
         app:layout_constraintBottom_toBottomOf="@id/episode_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:trackStopIndicatorSize="0dp"
         tools:progress="50000"
         tools:visibility="visible" />
 

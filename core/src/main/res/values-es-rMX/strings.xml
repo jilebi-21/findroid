@@ -61,7 +61,6 @@
     <string name="settings_use_cache_summary">Almacenar imágenes localmente acelera los tiempos de carga. Tomará efecto al reiniciar la app.</string>
     <string name="settings_cache_size">Tamaño de caché (MB)</string>
     <string name="settings_cache_size_message">La app usará esta cantidad de MB del almacenamiento interno para las imágenes. Valores grandes pueden ayudar en redes lentas.</string>
-    <string name="theme">Tema</string>
     <string name="error_preparing_player_items">Error preparando elementos.</string>
     <string name="view_details">Ver detalles</string>
     <string name="view_details_underlined"><u>Ver detalles</u></string>
@@ -110,9 +109,6 @@
     <string name="seek_forward_increment">Incremento del adelanto (ms)</string>
     <string name="subtitles">Subtítulos</string>
     <string name="subtitles_summary">Personalizar apariencia de subtítulos</string>
-    <string name="theme_system">Seguir al sistema</string>
-    <string name="theme_light">Claro</string>
-    <string name="theme_dark">Oscuro</string>
     <string name="episodes_label">Episodios</string>
     <string name="quick_connect">Conexión rápida</string>
     <string name="pref_player_intro_skipper">Saltador de intros (Intro Skipper)</string>
@@ -132,14 +128,12 @@
     <string name="add">Agregar</string>
     <string name="remove_user">Quitar usuario</string>
     <string name="remove_user_dialog_text">¿Está seguro de querer remover el usuario %1$s</string>
-    <string name="amoled_theme_summary">Use el tema AMOLED con un fondo negro puro</string>
     <string name="size">Tamaño</string>
     <string name="privacy_policy_notice">Al usar Findroid, aceptas la <a href="https://raw.githubusercontent.com/jarnedemeulemeester/findroid/main/PRIVACY">política de privacidad</a>, la cual establece que no recopilamos ningún dato</string>
     <string name="stop_download">Detener descarga</string>
     <string name="external">Externo</string>
     <string name="video">Video</string>
     <string name="audio">Audio</string>
-    <string name="amoled_theme">Tema oscuro AMOLED</string>
     <string name="player_gestures_seek">Gesto de búsqueda</string>
     <string name="player_gestures_seek_summary">Deslice horizontalmente para buscar hacia adelante o hacia atrás</string>
     <string name="app_language">Idioma de la aplicación</string>

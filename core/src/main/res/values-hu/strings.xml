@@ -52,7 +52,6 @@
     <string name="settings_category_cache">Gyorsítótár</string>
     <string name="settings_use_cache_title">Képek gyorsidőtározása</string>
     <string name="settings_cache_size">Gyorsidőtár mérete (MB)</string>
-    <string name="theme">Téma</string>
     <string name="error_preparing_player_items">Hiba a lejátszó elemeinek előkészítése során.</string>
     <string name="view_details">Részletek megtekintése</string>
     <string name="view_details_underlined"><u>Részletek megtekintése</u></string>
@@ -117,10 +116,7 @@
     <string name="player_gestures_zoom">Zoom gesztus</string>
     <string name="player_gestures_zoom_summary">Nagyítással töltsd ki a kijelzőt</string>
     <string name="subtitles_summary">Szabd testre a feliratok megjelenését</string>
-    <string name="theme_light">Világos</string>
-    <string name="theme_dark">Sötét</string>
     <string name="settings_category_network">Hálózat</string>
-    <string name="theme_system">Kövesd a rendszert</string>
     <string name="seek_forward_increment">Előre seekelési sebesség növekedése (ms)</string>
     <string name="settings_connect_timeout">Csatlakozási időtúllépés (ms)</string>
     <string name="add_user">Felhasználó hozzádása</string>
@@ -135,8 +131,6 @@
     <string name="downloaded_indicator">Letöltött indikátor</string>
     <string name="offline_mode_go_online">Váltás online módra</string>
     <string name="player_gestures_seek_summary">Húzd az ujjad jobbra vagy balra az előre, illetve vissza ugráshoz</string>
-    <string name="amoled_theme">AMOLED sötét mód</string>
-    <string name="amoled_theme_summary">Használd az AMOLED sötét módot teljesen fekete háttérrel</string>
     <string name="app_language">Alkalmazás nyelve</string>
     <string name="video">Videó</string>
     <string name="audio">Hang</string>

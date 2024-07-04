@@ -37,9 +37,6 @@
     <string name="subtitles_summary">pas het uiterlijk van ondertiteling aan</string>
     <string name="seeking">Zoeken</string>
     <string name="seek_back_increment">Terugzoek stappen (ms)</string>
-    <string name="theme_system">Volg systeem</string>
-    <string name="theme_light">Licht</string>
-    <string name="theme_dark">Donker</string>
     <string name="episodes_label">Afleveringen</string>
     <string name="sort_by_options_0">Titel</string>
     <string name="player_gestures_vb">Volume en felheid gebaren</string>
@@ -113,7 +110,6 @@
     <string name="settings_use_cache_summary">Cache afbeeldingen op schijf om laadtijden te versnellen. Treedt in werking na een herstart van de app.</string>
     <string name="settings_cache_size">Cache grote (MB)</string>
     <string name="settings_cache_size_message">App zal deze hoeveelheid MB van uw schijfruimte gebruiken om afbeeldingen van Jellyfin server op te slaan. Grotere waarden kunnen gunstig zijn op tragere netwerken.</string>
-    <string name="theme">Thema</string>
     <string name="error_preparing_player_items">Fout bij het voorbereiden van spelers items.</string>
     <string name="view_details">Bekijk details</string>
     <string name="view_details_underlined"><u>Bekijk details</u></string>
@@ -154,8 +150,6 @@
     <string name="audio">Geluid</string>
     <string name="offline_mode">Offline Modus</string>
     <string name="app_language">App taal</string>
-    <string name="amoled_theme">AMOLED donker thema</string>
-    <string name="amoled_theme_summary">Gebruik AMOLED thema met een compleet zwarte achtergrond</string>
     <string name="downloading_error">Fout tijdens het downloaden</string>
     <string name="temp">tijdelijk</string>
     <string name="pref_player_intro_skipper">Intro Overslaan</string>

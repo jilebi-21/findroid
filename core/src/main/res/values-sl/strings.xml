@@ -88,9 +88,6 @@
     <string name="seek_forward_increment">Iskanja naprej (ms)</string>
     <string name="subtitles">Podnapisi</string>
     <string name="subtitles_summary">Prilagodite videz podnapisov</string>
-    <string name="theme_system">Sledi sistemu</string>
-    <string name="theme_light">Svetlo</string>
-    <string name="theme_dark">Temno</string>
     <string name="settings_category_network">Omrežje</string>
     <string name="settings_request_timeout">Časovna omejitev zahteve (ms)</string>
     <string name="settings_socket_timeout">Časovna omejitev vtičnice (ms)</string>
@@ -123,7 +120,6 @@
     <string name="settings_use_cache_title">Shrani slike v predpomnilnik</string>
     <string name="settings_use_cache_summary">Shranite slike na disku, da pospešite čas nalaganja. Veljati bo začelo po ponovnem zagonu aplikacije.</string>
     <string name="settings_cache_size_message">Aplikacija bo uporabila to količino MB prostora naprave za shranjevanje slik s strežnika Jellyfin. Večje vrednosti so lahko koristne v počasnejših omrežjih.</string>
-    <string name="theme">Tema</string>
     <string name="error_preparing_player_items">Napaka pri pripravi elementov igralca.</string>
     <string name="download_mobile_data">Prenos preko mobilnih podatkov</string>
     <string name="mpv_player_summary">Za predvajanje videoposnetkov uporabite poskusni predvajalnik mpv player. mpv podpora več kodekov za video, zvok in podnapise.</string>
@@ -159,8 +155,6 @@
     <string name="privacy_policy_notice">Z uporabo Findroid-a se strinjate s <a href="https://raw.githubusercontent.com/jarnedemeulemeester/findroid/main/PRIVACY">pravilnikom o zasebnosti</a>, ki določa, da ne zbiramo nobenih podatkov</string>
     <string name="stop_download">Ustavi prenos</string>
     <string name="app_language">Jezik aplikacije</string>
-    <string name="amoled_theme">AMOLED temni način</string>
-    <string name="amoled_theme_summary">Uporabite temo AMOLED s čisto črnim ozadjem</string>
     <string name="preparing_download">Priprava prenosa</string>
     <string name="picture_in_picture">Slika v sliki</string>
 </resources>

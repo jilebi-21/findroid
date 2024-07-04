@@ -47,7 +47,6 @@
     <string name="settings_category_appearance">Stile</string>
     <string name="settings_category_device">Dispositivo</string>
     <string name="settings_use_cache_title">Cache delle immagini</string>
-    <string name="theme">Temi</string>
     <string name="error_preparing_player_items">Errore nella preparazione della riproduzione.</string>
     <string name="view_details">Mostra dettagli</string>
     <string name="view_details_underlined"><u>Vedi dettagli</u></string>
@@ -113,11 +112,8 @@
     <string name="remove_user">Rimuovi utente</string>
     <string name="remove_user_dialog_text">Sei sicuro di voler rimuovere l\'utente %1$s</string>
     <string name="episodes_label">Episodi</string>
-    <string name="theme_system">Usa le impostazioni di sistema</string>
     <string name="settings_request_timeout">Timeout richiesta (ms)</string>
     <string name="pref_player_mpv_ao">Output audio</string>
-    <string name="theme_light">Chiaro</string>
-    <string name="theme_dark">Scuro</string>
     <string name="settings_category_network">Rete</string>
     <string name="settings_connect_timeout">Timeout connessione (ms)</string>
     <string name="settings_socket_timeout">Timeout socket (ms)</string>
@@ -141,8 +137,6 @@
     <string name="temp">temporaneo</string>
     <string name="video">Video</string>
     <string name="extra_info">Mostra più informazioni</string>
-    <string name="amoled_theme">Tema scuro AMOLED</string>
-    <string name="amoled_theme_summary">Usa il tema AMOLED con lo sfondo nero</string>
     <string name="size">Dimensione</string>
     <string name="privacy_policy_notice">Utilizzando Findroid accetti l\'<a href="https://raw.githubusercontent.com/jarnedemeulemeester/findroid/main/PRIVACY">informativa sulla privacy</a> che afferma che non raccogliamo alcun dato</string>
     <string name="offline_mode_icon">Icona modalità Offline</string>

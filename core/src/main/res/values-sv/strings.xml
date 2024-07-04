@@ -44,7 +44,6 @@
     <string name="settings_category_device">Enhet</string>
     <string name="settings_category_cache">Cache</string>
     <string name="settings_cache_size">Lagringsstorlek (MB)</string>
-    <string name="theme">Tema</string>
     <string name="error_preparing_player_items">Fel vid förberedelse av spelarobjekt.</string>
     <string name="about">Om</string>
     <string name="privacy_policy">Integritetspolicy</string>
@@ -79,12 +78,7 @@
     <string name="seeking">Spolar</string>
     <string name="seek_back_increment">Spola bakåt intervall (ms)</string>
     <string name="seek_forward_increment">Spola framåt intervall (ms)</string>
-    <string name="amoled_theme">AMOLED-mörkt tema</string>
-    <string name="amoled_theme_summary">Använd AMOLED-tema med en helt svart bakgrund</string>
     <string name="subtitles">Textning</string>
-    <string name="theme_system">Följ systemet</string>
-    <string name="theme_light">Ljust</string>
-    <string name="theme_dark">Mörkt</string>
     <string name="settings_request_timeout">Timeout för begäran (ms)</string>
     <string name="settings_connect_timeout">Timeout för anslutning (ms)</string>
     <string name="users">Användare</string>

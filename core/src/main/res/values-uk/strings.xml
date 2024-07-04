@@ -45,7 +45,6 @@
     <string name="settings_category_cache">Кеш</string>
     <string name="settings_use_cache_title">Кеш зображень</string>
     <string name="settings_cache_size">Розмір кешу (МБ)</string>
-    <string name="theme">Тема</string>
     <string name="view_details">Переглянути деталі</string>
     <string name="view_details_underlined"><u>Детальніше</u></string>
     <string name="about">Про додаток</string>
@@ -80,12 +79,8 @@
     <string name="track_selection">[%1$s] %2$s (%3$s)</string>
     <string name="seeking">Пошук (Перемотка)</string>
     <string name="seek_back_increment">Крок пошуку назад (мс)</string>
-    <string name="amoled_theme">Темна тема AMOLED</string>
-    <string name="amoled_theme_summary">Використовувати AMOLED-тему на чистому чорному фоні</string>
     <string name="subtitles">Субтитри</string>
     <string name="subtitles_summary">Налаштувати вигляд субтитрів</string>
-    <string name="theme_light">Світла</string>
-    <string name="theme_dark">Темна</string>
     <string name="settings_category_network">Мережа</string>
     <string name="settings_request_timeout">Таймаут запиту (мс)</string>
     <string name="settings_socket_timeout">Таймаут сокета (мс)</string>
@@ -150,7 +145,6 @@
     <string name="sort_by_options_4">Дата перегляду</string>
     <string name="select_video_version_title">Виберіть версію</string>
     <string name="seek_forward_increment">Крок пошуку вперед (мс)</string>
-    <string name="theme_system">Як на пристрої</string>
     <string name="settings_connect_timeout">Тайм-аут підключення (мс)</string>
     <string name="add">Додати</string>
     <string name="audio">Аудіо</string>

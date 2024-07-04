@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         scheduleUserDataSync()
-        applyTheme()
         setupActivity()
     }
 
@@ -145,11 +144,5 @@ class MainActivity : AppCompatActivity() {
 
         workManager.beginUniqueWork("syncUserData", ExistingWorkPolicy.KEEP, syncWorkRequest)
             .enqueue()
-    }
-
-    private fun applyTheme() {
-        if (appPreferences.amoledTheme) {
-            setTheme(CoreR.style.ThemeOverlay_Findroid_Amoled)
-        }
     }
 }

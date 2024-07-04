@@ -54,7 +54,6 @@
     <string name="settings_category_cache">Кэш</string>
     <string name="settings_cache_size">Размер кэша (МБ)</string>
     <string name="settings_cache_size_message">Приложение будет использовать этот объём памяти для хранения изображений с сервера Jellyfin. Большие значения могут быть полезны при медленном соединении.</string>
-    <string name="theme">Тема</string>
     <string name="error_preparing_player_items">Ошибка при подготовке элементов проигрывателя.</string>
     <string name="view_details">Детали</string>
     <string name="view_details_underlined"><u>Детали</u></string>
@@ -104,9 +103,6 @@
     <string name="seek_forward_increment">Шаг перемотки вперёд (мс)</string>
     <string name="subtitles">Субтитры</string>
     <string name="subtitles_summary">Изменить стиль субтитров</string>
-    <string name="theme_system">Как на устройстве</string>
-    <string name="theme_light">Светлая</string>
-    <string name="theme_dark">Тёмная</string>
     <string name="pref_player_mpv_hwdec">Аппаратное декодирование</string>
     <string name="pref_player_mpv_vo">Вывод видео</string>
     <string name="pref_player_intro_skipper">Intro Skipper (Пропуск заставок)</string>
@@ -141,8 +137,6 @@
     <string name="audio">Аудио</string>
     <string name="player_gestures_seek_summary">Проведите горизонтально, чтобы перемотать вперёд или назад</string>
     <string name="player_gestures_seek">Жест перемотки</string>
-    <string name="amoled_theme">Тёмная тема AMOLED</string>
-    <string name="amoled_theme_summary">Использовать тему AMOLED с чистым чёрным фоном</string>
     <string name="downloading_error">Ошибка во время скачивания</string>
     <string name="not_enough_storage">Для этого элемента требуется %1$s свободного места, но доступно только %2$s</string>
     <string name="no_server_connection">Нет соединения с сервером Jellyfin, для просмотра в автономном режиме включите Офлайн-Режим</string>

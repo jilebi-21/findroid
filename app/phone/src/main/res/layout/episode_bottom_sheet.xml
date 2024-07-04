@@ -8,9 +8,9 @@
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
         android:id="@+id/loading_indicator"
+        style="?loadingProgressStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:indeterminate="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -80,7 +80,6 @@
         android:layout_height="4dp"
         android:layout_marginHorizontal="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/button_setup_background"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/episode_image"
         app:layout_constraintStart_toStartOf="@id/episode_image"
@@ -152,9 +151,9 @@
             android:id="@+id/community_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:drawablePadding="4dp"
             android:gravity="bottom"
-            android:layout_marginEnd="8dp"
             android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
             app:drawableStartCompat="@drawable/ic_star_filled"
             app:drawableTint="@color/item_rating"

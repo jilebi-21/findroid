@@ -8,37 +8,21 @@
     <!-- Base application theme. -->
     <style name="Theme.Findroid" parent="Base.Theme.Findroid" />
 
-    <style name="Base.Theme.Findroid" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Primary -->
-        <item name="colorPrimary">@color/primary_light</item>
-        <item name="colorOnPrimary">@color/on_primary_light</item>
-        <item name="colorPrimaryContainer">@color/primary_container_light</item>
-        <item name="colorOnPrimaryContainer">@color/on_primary_container_light</item>
+    <style name="Base.Theme.Findroid" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorOnAccent">@color/on_accent</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
 
-        <!-- Secondary -->
-        <item name="colorSecondary">@color/secondary_light</item>
-        <item name="colorOnSecondary">@android:color/white</item>
-        <item name="colorSecondaryContainer">@color/secondary_container_light</item>
-        <item name="colorOnSecondaryContainer">@color/on_secondary_container_light</item>
-
-        <!-- Tertiary -->
-        <item name="colorTertiary">@color/tertiary_light</item>
-        <item name="colorOnTertiary">@color/on_tertiary_light</item>
-        <item name="colorTertiaryContainer">@color/tertiary_container_light</item>
-        <item name="colorOnTertiaryContainer">@color/on_tertiary_container_light</item>
-
-        <!-- Surface -->
-        <item name="android:colorBackground">@color/surface_light</item>
-        <item name="colorSurface">@color/surface_light</item>
-        <item name="colorSurfaceContainer">?attr/colorSurface</item>
-        <item name="colorSurfaceContainerLow">?attr/colorSurface</item>
-        <item name="colorSurfaceContainerHigh">?attr/colorSurface</item>
-
-        <!-- Error -->
-        <item name="colorError">@color/error_light</item>
-        <item name="colorOnError">@color/on_error_light</item>
-        <item name="colorErrorContainer">@color/error_container_light</item>
-        <item name="colorOnErrorContainer">@color/on_error_container_light</item>
+        <item name="android:colorBackground">@color/surface</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="android:textColorPrimary">@color/text_color_primary</item>
+        <item name="android:textColorSecondary">@color/text_color_secondary</item>
+        <item name="textColorPrimary">@color/text_color_primary</item>
+        <item name="textColorSecondary">@color/text_color_secondary</item>
 
         <!-- Status bar -->
         <item name="android:statusBarColor">?attr/colorSurface</item>
@@ -59,24 +43,16 @@
 
         <!-- Extra -->
         <item name="elevationOverlayEnabled">false</item>
-        <item name="alertDialogTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog</item>
-        <item name="dialogCornerRadius">28dp</item>
+        <item name="alertDialogTheme">@style/ThemeX.AlertDialogTheme</item>
         <item name="preferenceTheme">@style/ThemeOverlay.Findroid.Preference</item>
+        <item name="bottomNavigationStyle">@style/ThemeX.BottomNavigationStyle</item>
+        <item name="navigationRailStyle">@style/ThemeX.NavigationRailStyle</item>
+        <item name="linearProgressIndicatorStyle">@style/ThemeX.LinearProgressIndicator</item>
+        <item name="materialIconButtonFilledTonalStyle">@style/ThemeX.IconTonalButton</item>
+        <item name="loadingProgressStyle">@style/ThemeX.LoadingProgressStyle</item>
     </style>
 
     <style name="ThemeOverlay.Findroid.DynamicColors" parent="ThemeOverlay.Material3.DynamicColors.DayNight">
         <item name="android:navigationBarColor">?attr/colorSurfaceContainer</item>
     </style>
-
-    <string-array name="themes">
-        <item>@string/theme_system</item>
-        <item>@string/theme_light</item>
-        <item>@string/theme_dark</item>
-    </string-array>
-
-    <string-array name="themes_value">
-        <item>system</item>
-        <item>light</item>
-        <item>dark</item>
-    </string-array>
 </resources>

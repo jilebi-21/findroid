@@ -52,7 +52,6 @@
     <string name="settings_category_device">מכשיר</string>
     <string name="device_name">שם מכשיר</string>
     <string name="settings_cache_size">גודל מטמון (מ\"ב)</string>
-    <string name="theme">ערכת נושא</string>
     <string name="settings_cache_size_message">היישומון ישתמש בכמות זו של מ\"ב משטח הדיסק שלך לאחסן תמונות משרת Jellyfin. ערכים גדולים יותר עשויים להועיל ברשתות איטיות יותר.</string>
     <string name="view_details">הצג פרטים</string>
     <string name="view_details_underlined"><u>הצג פרטים</u></string>
@@ -90,15 +89,10 @@
     <string name="select_video_version_title">בחר גרסה</string>
     <string name="track_selection">[%1$s] %2$s (%3$s)</string>
     <string name="subtitles">כתוביות</string>
-    <string name="theme_light">בהיר</string>
-    <string name="theme_dark">כהה</string>
     <string name="settings_category_network">רשת</string>
     <string name="seeking">קפיצה</string>
     <string name="seek_forward_increment">גודל קפיצה קדימה (מילי שניות)</string>
-    <string name="amoled_theme">ערכת נושא כהה ל-AMOLED</string>
-    <string name="amoled_theme_summary">השתמש בערכת נושא עם רקע שחור אמיתי למסכי AMOLED</string>
     <string name="subtitles_summary">התאם אישית מראה כתוביות</string>
-    <string name="theme_system">השתמש בערכת המערכת</string>
     <string name="settings_request_timeout">זמן קצוב לבקשה (מילי שניות)</string>
     <string name="settings_connect_timeout">זמן קצוב לחיבור (מילי שניות)</string>
     <string name="users">משתמשים</string>

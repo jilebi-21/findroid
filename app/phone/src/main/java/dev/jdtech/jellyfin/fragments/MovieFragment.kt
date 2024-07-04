@@ -437,7 +437,7 @@ class MovieFragment : Fragment() {
     }
 
     private fun createErrorDialog(uiText: UiText) {
-        val builder = MaterialAlertDialogBuilder(requireContext())
+        val builder = AlertDialog.Builder(requireContext(), CoreR.style.ThemeX_AlertDialogTheme)
         builder
             .setTitle(CoreR.string.downloading_error)
             .setMessage(uiText.asString(requireContext().resources))
@@ -449,8 +449,7 @@ class MovieFragment : Fragment() {
     }
 
     private fun createDownloadPreparingDialog() {
-        val builder = MaterialAlertDialogBuilder(requireContext())
-        downloadPreparingDialog = builder
+        downloadPreparingDialog = AlertDialog.Builder(requireContext(), CoreR.style.ThemeX_AlertDialogTheme)
             .setTitle(CoreR.string.preparing_download)
             .setView(R.layout.preparing_download_dialog)
             .setCancelable(false)
@@ -459,8 +458,7 @@ class MovieFragment : Fragment() {
     }
 
     private fun createCancelDialog() {
-        val builder = MaterialAlertDialogBuilder(requireContext())
-        val dialog = builder
+        val dialog = AlertDialog.Builder(requireContext(), CoreR.style.ThemeX_AlertDialogTheme)
             .setTitle(CoreR.string.cancel_download)
             .setMessage(CoreR.string.cancel_download_message)
             .setPositiveButton(CoreR.string.stop_download) { _, _ ->
