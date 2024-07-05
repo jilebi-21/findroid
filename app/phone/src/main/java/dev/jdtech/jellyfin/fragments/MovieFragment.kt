@@ -5,8 +5,6 @@ import android.content.Intent
 import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.text.Html.fromHtml
 import android.text.Spannable
 import android.text.SpannableString
@@ -26,7 +24,6 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.chip.Chip
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 import dev.jdtech.jellyfin.AppPreferences
 import dev.jdtech.jellyfin.R
@@ -41,7 +38,6 @@ import dev.jdtech.jellyfin.models.PlayerItem
 import dev.jdtech.jellyfin.models.UiText
 import dev.jdtech.jellyfin.models.isDownloaded
 import dev.jdtech.jellyfin.models.isDownloading
-import dev.jdtech.jellyfin.utils.TimeUtils
 import dev.jdtech.jellyfin.utils.checkIfLoginRequired
 import dev.jdtech.jellyfin.viewmodels.MovieEvent
 import dev.jdtech.jellyfin.viewmodels.MovieViewModel
@@ -99,11 +95,13 @@ class MovieFragment : Fragment() {
                             10 -> {
                                 downloadPreparingDialog.dismiss()
                             }
+
                             DownloadManager.STATUS_PENDING -> {
                                 binding.itemActions.downloadButton.setIconResource(android.R.color.transparent)
                                 binding.itemActions.progressDownload.isIndeterminate = true
                                 binding.itemActions.progressDownload.isVisible = true
                             }
+
                             DownloadManager.STATUS_RUNNING -> {
                                 binding.itemActions.downloadButton.setIconResource(android.R.color.transparent)
                                 binding.itemActions.progressDownload.isVisible = true
@@ -111,13 +109,18 @@ class MovieFragment : Fragment() {
                                     binding.itemActions.progressDownload.isIndeterminate = true
                                 } else {
                                     binding.itemActions.progressDownload.isIndeterminate = false
-                                    binding.itemActions.progressDownload.setProgressCompat(progress, true)
+                                    binding.itemActions.progressDownload.setProgressCompat(
+                                        progress,
+                                        true
+                                    )
                                 }
                             }
+
                             DownloadManager.STATUS_SUCCESSFUL -> {
                                 binding.itemActions.downloadButton.setIconResource(CoreR.drawable.ic_trash)
                                 binding.itemActions.progressDownload.isVisible = false
                             }
+
                             else -> {
                                 binding.itemActions.progressDownload.isVisible = false
                                 binding.itemActions.downloadButton.setIconResource(CoreR.drawable.ic_download)
@@ -291,12 +294,8 @@ class MovieFragment : Fragment() {
             binding.itemActions.playButton.isEnabled = item.canPlay && item.sources.isNotEmpty()
             if (item.playbackPositionTicks > 0) {
                 binding.itemActions.playButton.setTypeface(null, Typeface.NORMAL)
-
                 val text = getString(CoreR.string.continue_watching)
-                val remTime = TimeUtils.ticksToMinutes(item.runtimeTicks - item.playbackPositionTicks)
-
-                val spannable = SpannableString(text + " (" + remTime + "m)")
-
+                val spannable = SpannableString("$text ($remainingTime)")
                 spannable.setSpan(
                     StyleSpan(Typeface.BOLD),
                     0,
@@ -323,35 +322,54 @@ class MovieFragment : Fragment() {
                 false -> binding.itemActions.downloadButton.isVisible = false
             }
 
-            binding.name.text = item.name
-            binding.originalTitle.text = item.originalTitle
-            if (dateString.isEmpty()) {
-                binding.year.isVisible = false
-            } else {
-                binding.year.text = dateString
-            }
-            if (runTime.isEmpty()) {
-                binding.playtime.isVisible = false
-            } else {
-                binding.playtime.text = runTime
-            }
-            binding.officialRating.text = item.officialRating
+            binding.apply {
+                name.text = item.name
+                originalTitle.text = item.originalTitle
 
-            binding.communityRating.isVisible = item.communityRating != null
-            item.communityRating?.also {
-                binding.communityRating.text = it.toString()
-                binding.communityRating.isVisible = true
-            }
+                dateString.isNotEmpty().also {
+                    metadata.year.text = dateString
+                    metadata.yearDot.isVisible = it
+                    metadata.year.isVisible = it
+                }
 
-            if (appPreferences.displayExtraInfo) {
-                binding.info.video.text = videoString
-                binding.info.videoGroup.isVisible = videoString.isNotEmpty()
-                binding.info.audio.text = audioString
-                binding.info.audioGroup.isVisible = audioString.isNotEmpty()
-                binding.info.subtitles.text = subtitleString
-                binding.info.subtitlesGroup.isVisible = subtitleString.isNotEmpty()
-                size?.let { binding.info.size.text = it }
-                binding.info.sizeGroup.isVisible = size != null
+                runTime.isNotEmpty().also {
+                    metadata.playtime.text = runTime
+                    metadata.playtimeDot.isVisible = it
+                    metadata.playtime.isVisible = it
+                }
+
+                item.officialRating.isNullOrEmpty().also {
+                    metadata.officialRating.text = item.officialRating
+                    metadata.officialRatingContainer.isVisible = !it
+                    metadata.officialRatingDot.isVisible = !it
+                }
+
+                item.communityRating.also {
+                    metadata.communityRating.text = it.toString()
+                    metadata.communityRating.isVisible = it !== null
+
+                    //hide if any extra dot separators
+                    if (it == null) {
+                        if (metadata.officialRatingDot.isVisible)
+                            metadata.officialRatingDot.isVisible = false
+                        else if (metadata.playtimeDot.isVisible) {
+                            metadata.playtimeDot.isVisible = false
+                        } else if (metadata.yearDot.isVisible) {
+                            metadata.yearDot.isVisible = false
+                        }
+                    }
+                }
+
+                if (appPreferences.displayExtraInfo) {
+                    info.video.text = videoString
+                    info.videoGroup.isVisible = videoString.isNotEmpty()
+                    info.audio.text = audioString
+                    info.audioGroup.isVisible = audioString.isNotEmpty()
+                    info.subtitles.text = subtitleString
+                    info.subtitlesGroup.isVisible = subtitleString.isNotEmpty()
+                    size?.let { info.size.text = it }
+                    info.sizeGroup.isVisible = size != null
+                }
             }
 
             binding.info.tagline.isVisible = if (!item.taglines.isNullOrEmpty()) {
@@ -363,7 +381,7 @@ class MovieFragment : Fragment() {
             binding.info.director.text = director?.name
             binding.info.directorGroup.isVisible = director != null
             binding.info.writers.text = writersString
-            binding.info.writersGroup.isVisible = writers.isNotEmpty()
+            binding.info.writersGroup.isVisible = writersString.isNotEmpty()
 
             binding.genreChips.removeAllViews()
             val layoutInflater = LayoutInflater.from(context)
@@ -449,11 +467,12 @@ class MovieFragment : Fragment() {
     }
 
     private fun createDownloadPreparingDialog() {
-        downloadPreparingDialog = AlertDialog.Builder(requireContext(), CoreR.style.ThemeX_AlertDialogTheme)
-            .setTitle(CoreR.string.preparing_download)
-            .setView(R.layout.preparing_download_dialog)
-            .setCancelable(false)
-            .create()
+        downloadPreparingDialog =
+            AlertDialog.Builder(requireContext(), CoreR.style.ThemeX_AlertDialogTheme)
+                .setTitle(CoreR.string.preparing_download)
+                .setView(R.layout.preparing_download_dialog)
+                .setCancelable(false)
+                .create()
         downloadPreparingDialog.show()
     }
 

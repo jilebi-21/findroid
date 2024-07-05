@@ -19,6 +19,8 @@ import dev.jdtech.jellyfin.models.VideoMetadata
 import dev.jdtech.jellyfin.models.isDownloading
 import dev.jdtech.jellyfin.repository.JellyfinRepository
 import dev.jdtech.jellyfin.utils.Downloader
+import dev.jdtech.jellyfin.utils.TimeUtils.minutesToHours
+import dev.jdtech.jellyfin.utils.TimeUtils.ticksToMinutes
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Runnable
 import kotlinx.coroutines.channels.Channel
@@ -61,7 +63,6 @@ constructor(
             val item: FindroidMovie,
             val actors: List<BaseItemPerson>,
             val director: BaseItemPerson?,
-            val writers: List<BaseItemPerson>,
             val videoMetadata: VideoMetadata,
             val writersString: String,
             val genresString: String,
@@ -69,6 +70,7 @@ constructor(
             val audioString: String,
             val subtitleString: String,
             val runTime: String,
+            val remainingTime: String,
             val dateString: String,
         ) : UiState()
 
@@ -77,9 +79,6 @@ constructor(
     }
 
     lateinit var item: FindroidMovie
-    private var writers: List<BaseItemPerson> = emptyList()
-    private var writersString: String = ""
-    private var runTime: String = ""
 
     private var currentUiState: UiState = UiState.Loading
 
@@ -88,9 +87,12 @@ constructor(
             _uiState.emit(UiState.Loading)
             try {
                 item = repository.getMovie(itemId)
-                writers = getWriters(item)
-                writersString = writers.joinToString(separator = ", ") { it.name.toString() }
-                runTime = "${item.runtimeTicks.div(600000000)} min"
+                val writersString =
+                    getWriters(item).joinToString(separator = ", ") { it.name.toString() }
+                val runTime = minutesToHours(ticksToMinutes(item.runtimeTicks))
+                val remainingTime = minutesToHours(
+                    ticksToMinutes(item.runtimeTicks - item.playbackPositionTicks)
+                )
                 if (item.isDownloading()) {
                     pollDownloadProgress()
                 }
@@ -98,7 +100,6 @@ constructor(
                     item,
                     getActors(item),
                     getDirector(item),
-                    writers,
                     parseVideoMetadata(item),
                     writersString,
                     item.genres.joinToString(separator = ", "),
@@ -106,6 +107,7 @@ constructor(
                     getMediaString(item, MediaStreamType.AUDIO),
                     getMediaString(item, MediaStreamType.SUBTITLE),
                     runTime,
+                    remainingTime,
                     getDateString(item),
                 )
                 _uiState.emit(currentUiState)
@@ -283,6 +285,7 @@ constructor(
                         updateUiPlayedState(originalPlayedState)
                     }
                 }
+
                 true -> {
                     try {
                         repository.markAsPlayed(item.id)
@@ -319,6 +322,7 @@ constructor(
                         updateUiFavoriteState(originalFavoriteState)
                     }
                 }
+
                 true -> {
                     try {
                         repository.markAsFavorite(item.id)
@@ -363,7 +367,9 @@ constructor(
 
     fun cancelDownload() {
         viewModelScope.launch {
-            downloader.cancelDownload(item, item.sources.first { it.type == FindroidSourceType.LOCAL })
+            downloader.cancelDownload(
+                item,
+                item.sources.first { it.type == FindroidSourceType.LOCAL })
             loadData(item.id)
         }
     }

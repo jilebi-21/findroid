@@ -3,7 +3,6 @@ package dev.jdtech.jellyfin.fragments
 import android.app.DownloadManager
 import android.graphics.Typeface
 import android.os.Bundle
-import android.text.Html.fromHtml
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.format.Formatter
@@ -43,15 +42,10 @@ import dev.jdtech.jellyfin.viewmodels.EpisodeBottomSheetViewModel
 import dev.jdtech.jellyfin.viewmodels.PlayerItemsEvent
 import dev.jdtech.jellyfin.viewmodels.PlayerViewModel
 import kotlinx.coroutines.launch
-import org.jellyfin.sdk.model.DateTime
 import timber.log.Timber
-import java.text.DateFormat
-import java.time.ZoneOffset
-import java.util.Date
 import java.util.UUID
 import javax.inject.Inject
 import android.R as AndroidR
-import com.google.android.material.R as MaterialR
 import dev.jdtech.jellyfin.core.R as CoreR
 
 @AndroidEntryPoint
@@ -306,21 +300,47 @@ class EpisodeBottomSheetFragment : BottomSheetDialogFragment() {
                 )
             }
 
-            binding.seriesName.text = episode.seriesName
-            binding.overview.text = fromHtml(episode.overview, 0)
-            binding.year.text = formatDateTime(episode.premiereDate)
-            binding.playtime.text = getString(CoreR.string.runtime_minutes, episode.runtimeTicks.div(600000000))
+            binding.apply {
+                seriesName.text = episode.seriesName
+                overview.text = overviewSpan
 
-            binding.communityRating.isVisible = episode.communityRating != null
-            episode.communityRating?.also {
-                binding.communityRating.text = episode.communityRating.toString()
-                binding.communityRating.isVisible = true
+                premiereDate.isNotEmpty().also {
+                    metadata.year.text = premiereDate
+                    metadata.yearDot.isVisible = it
+                    metadata.year.isVisible = it
+                }
+
+                runTime.isNotEmpty().also {
+                    metadata.playtime.text = runTime
+                    metadata.playtimeDot.isVisible = it
+                    metadata.playtime.isVisible = it
+                }
+
+                metadata.officialRating.isVisible = false
+                metadata.officialRatingDot.isVisible = false
+
+                episode.communityRating.also {
+                    metadata.communityRating.text = it.toString()
+                    metadata.communityRating.isVisible = it !== null
+
+                    //hide if any extra dot separators
+                    if (it == null) {
+                        if (metadata.officialRatingDot.isVisible)
+                            metadata.officialRatingDot.isVisible = false
+                        else if (metadata.playtimeDot.isVisible) {
+                            metadata.playtimeDot.isVisible = false
+                        } else if (metadata.yearDot.isVisible) {
+                            metadata.yearDot.isVisible = false
+                        }
+                    }
+                }
             }
             binding.missingIcon.isVisible = false
 
             if (appPreferences.displayExtraInfo) {
                 size?.let { binding.size.text = it }
                 binding.size.isVisible = size != null
+                binding.sizeDot.isVisible = size != null
             }
 
             bindCardItemImage(binding.episodeImage, episode)
@@ -422,12 +442,5 @@ class EpisodeBottomSheetFragment : BottomSheetDialogFragment() {
                 itemName = name,
             ),
         )
-    }
-
-    private fun formatDateTime(datetime: DateTime?): String {
-        if (datetime == null) return ""
-        val instant = datetime.toInstant(ZoneOffset.UTC)
-        val date = Date.from(instant)
-        return DateFormat.getDateInstance(DateFormat.SHORT).format(date)
     }
 }

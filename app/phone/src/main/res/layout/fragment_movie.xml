@@ -79,61 +79,9 @@
                         tools:text="Alita" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="24dp"
-                    android:gravity="center">
-
-                    <TextView
-                        android:id="@+id/year"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:gravity="center"
-                        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-                        tools:text="2019" />
-
-                    <TextView
-                        android:id="@+id/playtime"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:gravity="center"
-                        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-                        tools:text="122 min" />
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        app:cardBackgroundColor="?colorSurfaceVariant"
-                        app:cardCornerRadius="@dimen/radius_official_rating_card">
-
-                        <TextView
-                            android:id="@+id/official_rating"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="4dp"
-                            android:layout_marginVertical="2dp"
-                            android:gravity="center"
-                            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
-                            android:textColor="?colorOnSurface"
-                            tools:text="PG-13" />
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <TextView
-                        android:id="@+id/community_rating"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:drawablePadding="4dp"
-                        android:gravity="center"
-                        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-                        app:drawableStartCompat="@drawable/ic_star_filled"
-                        app:drawableTint="@color/item_rating"
-                        tools:text="7.3" />
-                </LinearLayout>
+                <include
+                    android:id="@+id/metadata"
+                    layout="@layout/item_metadata" />
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"

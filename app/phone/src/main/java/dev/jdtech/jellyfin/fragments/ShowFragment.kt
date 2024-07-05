@@ -163,7 +163,8 @@ class ShowFragment : Fragment() {
     private fun bindUiStateNormal(uiState: ShowViewModel.UiState.Normal) {
         uiState.apply {
             val downloaded = item.isDownloaded()
-            val canDownload = item.canDownload && item.sources.any { it.type == FindroidSourceType.REMOTE }
+            val canDownload =
+                item.canDownload && item.sources.any { it.type == FindroidSourceType.REMOTE }
 
             binding.originalTitle.isVisible = item.originalTitle != item.name
             if (item.trailer != null) {
@@ -197,23 +198,43 @@ class ShowFragment : Fragment() {
                 }
             }
 
-            binding.name.text = item.name
-            binding.originalTitle.text = item.originalTitle
-            if (dateString.isEmpty()) {
-                binding.year.isVisible = false
-            } else {
-                binding.year.text = dateString
-            }
-            if (runTime.isEmpty()) {
-                binding.playtime.isVisible = false
-            } else {
-                binding.playtime.text = runTime
-            }
-            binding.officialRating.text = item.officialRating
-            binding.communityRating.isVisible = item.communityRating != null
-            item.communityRating?.also {
-                binding.communityRating.text = item.communityRating.toString()
-                binding.communityRating.isVisible = true
+            binding.apply {
+                name.text = item.name
+                originalTitle.text = item.originalTitle
+
+                dateString.isNotEmpty().also {
+                    metadata.year.text = dateString
+                    metadata.yearDot.isVisible = it
+                    metadata.year.isVisible = it
+                }
+
+                runTime.isNotEmpty().also {
+                    metadata.playtime.text = runTime
+                    metadata.playtimeDot.isVisible = it
+                    metadata.playtime.isVisible = it
+                }
+
+                item.officialRating.isNullOrEmpty().also {
+                    metadata.officialRating.text = item.officialRating
+                    metadata.officialRatingContainer.isVisible = !it
+                    metadata.officialRatingDot.isVisible = !it
+                }
+
+                item.communityRating.also {
+                    metadata.communityRating.text = it.toString()
+                    metadata.communityRating.isVisible = it !== null
+
+                    //hide if any extra dot separators
+                    if (it == null) {
+                        if (metadata.officialRatingDot.isVisible)
+                            metadata.officialRatingDot.isVisible = false
+                        else if (metadata.playtimeDot.isVisible) {
+                            metadata.playtimeDot.isVisible = false
+                        } else if (metadata.yearDot.isVisible) {
+                            metadata.yearDot.isVisible = false
+                        }
+                    }
+                }
             }
 
             binding.info.description.text = fromHtml(item.overview, 0)

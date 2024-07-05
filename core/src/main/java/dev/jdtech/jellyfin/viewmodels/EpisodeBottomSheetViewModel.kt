@@ -3,6 +3,8 @@ package dev.jdtech.jellyfin.viewmodels
 import android.app.DownloadManager
 import android.os.Handler
 import android.os.Looper
+import android.text.Html.fromHtml
+import android.text.Spanned
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -13,12 +15,18 @@ import dev.jdtech.jellyfin.models.UiText
 import dev.jdtech.jellyfin.models.isDownloading
 import dev.jdtech.jellyfin.repository.JellyfinRepository
 import dev.jdtech.jellyfin.utils.Downloader
+import dev.jdtech.jellyfin.utils.TimeUtils.minutesToHours
+import dev.jdtech.jellyfin.utils.TimeUtils.ticksToMinutes
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
+import org.jellyfin.sdk.model.DateTime
 import java.io.File
+import java.text.DateFormat
+import java.time.ZoneOffset
+import java.util.Date
 import java.util.UUID
 import javax.inject.Inject
 import kotlin.random.Random
@@ -45,6 +53,9 @@ constructor(
     sealed class UiState {
         data class Normal(
             val episode: FindroidEpisode,
+            val overviewSpan: Spanned,
+            val premiereDate: String,
+            val runTime: String,
         ) : UiState()
 
         data object Loading : UiState()
@@ -63,7 +74,12 @@ constructor(
                 if (item.isDownloading()) {
                     pollDownloadProgress()
                 }
-                currentUiState = UiState.Normal(item)
+                currentUiState = UiState.Normal(
+                    episode = item,
+                    premiereDate = formatDateTime(item.premiereDate),
+                    runTime = minutesToHours(ticksToMinutes(item.runtimeTicks)),
+                    overviewSpan = fromHtml(item.overview, 0)
+                )
                 _uiState.emit(currentUiState)
             } catch (_: NullPointerException) {
                 // Navigate back because item does not exist (probably because it's been deleted)
@@ -201,6 +217,15 @@ constructor(
             }
         }
         handler.post(downloadProgressRunnable)
+    }
+
+    private fun formatDateTime(datetime: DateTime?): String {
+        if (datetime == null) return ""
+        val instant = datetime.toInstant(ZoneOffset.UTC)
+        val date = Date.from(instant)
+        return DateFormat.getDateInstance(DateFormat.MEDIUM)
+            .format(date)
+            .replace("-", " ")
     }
 
     override fun onCleared() {
