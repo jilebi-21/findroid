@@ -74,4 +74,23 @@
         <item name="android:layout_marginHorizontal">4dp</item>
         <item name="android:alpha">0.6</item>
     </style>
+
+    <style name="ThemeX.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxBackgroundColor">?colorSurfaceVariant</item>
+        <item name="hintEnabled">false</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Findroid.Corner.Medium</item>
+    </style>
+
+    <style name="ThemeX.Button" parent="Widget.Material3.Button">
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:minHeight">54dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Findroid.Corner.Medium</item>
+    </style>
+
+    <style name="ThemeX.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:minHeight">54dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Findroid.Corner.Medium</item>
+    </style>
 </resources>

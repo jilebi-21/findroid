@@ -59,11 +59,11 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edit_text_username_layout"
+                style="@style/ThemeX.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginBottom="12dp"
-                android:hint="@string/edit_text_username_hint"
                 app:startIconDrawable="@drawable/ic_user">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -71,17 +71,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autofillHints="username"
+                    android:hint="@string/edit_text_username_hint"
                     android:inputType="text" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edit_text_password_layout"
+                style="@style/ThemeX.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginBottom="24dp"
-                android:hint="@string/edit_text_password_hint"
                 app:passwordToggleEnabled="true"
                 app:startIconDrawable="@drawable/ic_lock">
 
@@ -90,36 +90,36 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autofillHints="password"
+                    android:hint="@string/edit_text_password_hint"
                     android:imeOptions="actionGo"
                     android:inputType="textPassword" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
-            <RelativeLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="24dp">
+                android:layout_marginHorizontal="24dp"
+                android:gravity="center">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button_login"
+                    style="@style/ThemeX.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/button_login"
-                    app:backgroundTint="?colorAccent"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Findroid.Corner.Small" />
+                    android:text="@string/button_login" />
 
-                <ProgressBar
+                <com.google.android.material.progressindicator.CircularProgressIndicator
                     android:id="@+id/progress_circular"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:elevation="8dp"
-                    android:indeterminateTint="?attr/colorOnAccent"
-                    android:padding="8dp"
-                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:indeterminate="true"
+                    android:visibility="gone"
+                    app:indicatorColor="?colorAccent"
                     tools:visibility="visible" />
-            </RelativeLayout>
+            </FrameLayout>
 
-            <RelativeLayout
+            <FrameLayout
                 android:id="@+id/button_quickconnect_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -129,21 +129,21 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button_quickconnect"
-                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    style="@style/ThemeX.Button.Outlined"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/quick_connect"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Findroid.Corner.Small" />
+                    android:text="@string/quick_connect" />
 
-                <ProgressBar
+                <com.google.android.material.progressindicator.CircularProgressIndicator
                     android:id="@+id/button_quickconnect_progress"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:elevation="8dp"
-                    android:indeterminateTint="?attr/colorPrimary"
-                    android:padding="8dp"
-                    android:visibility="invisible" />
-            </RelativeLayout>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:indeterminate="true"
+                    android:visibility="gone"
+                    app:indicatorColor="?colorAccent"
+                    tools:visibility="visible" />
+            </FrameLayout>
 
             <TextView
                 android:id="@+id/login_disclaimer"

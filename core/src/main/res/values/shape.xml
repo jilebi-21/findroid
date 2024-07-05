@@ -8,6 +8,9 @@
         <item name="cornerSize">5dp</item>
     </style>
 
+    <style name="ShapeAppearance.Findroid.Corner.Medium" parent="ShapeAppearance.Material3.Corner.Medium">
+    </style>
+
     <style name="ShapeAppearanceOverlay.Findroid.Image" parent="">
         <item name="cornerSize">5dp</item>
     </style>
